@@ -1,0 +1,70 @@
+<ion-content>
+<header class="mui-bar mui-bar-nav">
+  <a class="shouye link" navPop>
+    <img src="assets/img/user/zhuye.png" alt=""/>
+  </a>
+  <h1 class="mui-title">个人中心</h1>
+  <a class="message link" data-link="../../html/enter/message.html" (click)="toMegPage()">
+    <img src="assets/img/order/xiaoxi.png" alt=""/>
+  </a>
+</header>
+<div class="mui-content">
+  <div class="main-top">
+    <p>
+      <img src="assets/img/user/touxiang.png" class="tx"/>
+      <img src="assets/img/user/bianji.png" alt="" />
+      <input type="file" id="file1" name="file1" />
+    </p>
+    <p>
+      <img src="assets/img/user/jinbi.png" alt="" />
+      <span>余额</span>
+      <b>566</b>
+    </p>
+    <p class="link" data-link="../../html/user/renZheng_ziLiao.html">
+      <span>商家信息已验证</span><span>，点击查看</span>
+    </p>
+  </div>
+  <div class="main_bot">
+    <table>
+      <tr>
+        <td class="link"  [navPush]="'BindPlatformPage'">
+          <img src="assets/img/user/geren_1.png" alt="" />
+          <p>绑定外卖平台</p>
+        </td>
+        <td class="link"  [navPush]="'LianxiFangshiPage'">
+          <img src="assets/img/user/geren_2.png" alt="" />
+          <p>联系方式</p>
+        </td>
+        <td class="link"  [navPush]="'FinishedOrderSelectPage'">
+          <img src="assets/img/user/geren_3.png" alt="" />
+          <p>已完成订单查询</p>
+        </td>
+      </tr>
+      <tr>
+        <td class="link"  [navPush]="'MoneyChongzhiPage'">
+          <img src="assets/img/user/geren_4.png" alt="" />
+          <p>余额充值</p>
+        </td>
+        <td class="link"  [navPush]="'PingtaiSetPage'">
+          <img src="assets/img/user/geren_5.png" alt="" />
+          <p>平台设置</p>
+        </td>
+        <td class="link"  [navPush]="'ShangjiaApplyPage'">
+          <img src="assets/img/user/geren_6.png" alt="" />
+          <p>优质商家申请</p>
+        </td>
+      </tr>
+    </table>
+  </div>
+</div>
+<div class="tx_pop">
+  <div class="tx_main">
+    <p>拍照</p>
+    <p>
+      <input type="file" name="file" id="file"/>
+      <span>从手机相册中选择</span>
+    </p>
+    <p class="cancel">取消</p>
+  </div>
+</div>
+</ion-content>
