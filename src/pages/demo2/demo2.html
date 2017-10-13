@@ -1,0 +1,16 @@
+
+<ion-header>
+  <!--加入hideBackButton属性即可隐藏返回上一页的图标-->
+  <!--或者通过控制 ViewController 来实现：this.viewCtrl.showBackButton(false);-->
+  <ion-navbar hideBackButton="true">
+    <ion-title>demo2</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content class="main-content">
+  <!--加入navPop属性即可返回上一页-->
+  <p navPop >返回上一页</p>
+<button (click)="openModal()">打开</button>
+</ion-content>

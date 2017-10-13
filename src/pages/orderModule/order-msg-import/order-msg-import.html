@@ -1,0 +1,117 @@
+<header class="mui-bar mui-bar-nav">
+  <a class="mui-action-back">
+    <img src="assets/img/order/back.png" alt=""/>
+  </a>
+  <h1 class="mui-title">订单信息录入</h1>
+  <a class="message link" data-link="../../html/order/shoufei_guize.html">
+    收费规则
+  </a>
+</header>
+<div class="mui-content">
+  <div class="main_one">
+    <p class="one_list">
+      <span class="ms">客人姓名</span>
+      <input type="number" placeholder="请输入客人姓名"/>
+    </p>
+    <p class="one_list">
+      <span class="ms">客人电话</span>
+      <input type="number" placeholder="请输入客人电话"/>
+    </p>
+    <p class="one_list link" data-link="keRen_area.html">
+      <span class="ms">客人地址</span>
+      <span class="txt mui-ellipsis">请选择地址</span>
+      <img src="assets/img/user/xuanfen.png"/>
+    </p>
+    <p class="one_list">
+      <span class="ms">详细地址</span>
+      <input type="text" placeholder="例15楼302" class="mui-ellipsis"/>
+    </p>
+  </div>
+  <div class="main_one">
+    <div class="one_list one_list1">
+      <span class="ms">商品信息</span>
+      <div class="mui-ellipsis link spxx" data-link="add_shangPin_message.html">
+        <!--页面跳转之后文字提示内容不显示-->
+        请输入商品信息（名称，数量，价格）
+        <!--页面跳转之后的显示数据布局，目前举例3条，可放开下面注释上面进行显示-->
+        <!--<p>
+                  <span class="mui-ellipsis mc">西红柿鸡蛋盖浇饭</span>
+                  <span>x1</span>
+                  <span>￥10</span>
+              </p>
+              <p>
+                  <span class="mui-ellipsis mc">西红柿鸡蛋盖浇饭</span>
+                  <span>x1</span>
+                  <span>￥10</span>
+              </p>
+              <p>
+                  <span class="mui-ellipsis mc">西红柿鸡蛋盖浇饭</span>
+                  <span>x1</span>
+                  <span>￥10</span>
+              </p>-->
+      </div>
+      <span class="tianjia link" data-link="add_shangPin_message.html"><img src="assets/img/order/tianjia_1.png"/></span>
+      <p style="clear: both;"></p>
+    </div>
+  </div>
+
+  <div class="main_one">
+    <p class="one_list">
+      <span class="ms">配送费</span>
+      <input type="text" placeholder="请输入商品价格" class="pri"/>
+    </p>
+    <p class="one_list">
+      <span class="ms">小费</span>
+      <input type="text" placeholder="请输入商品价格" class="pri"/>
+    </p>
+  </div>
+  <div class="main_one ping_tai">
+    <p class="one_list">
+      <span class="ms">订单来源</span>
+      <span class="txt">请选择订单来源</span>
+      <img src="assets/img/user/xuanfen.png"/>
+    </p>
+  </div>
+  <div class="main_one bei_zhu">
+    <p class="one_list">
+      <span class="ms">备注</span>
+      <span class="txt mui-ellipsis">捎句话给配送员</span>
+      <img src="assets/img/user/xuanfen.png"/>
+    </p>
+  </div>
+  <p class="btn">
+    <!--输入完成之后会显示总价格，当前不显示-->
+    <!--<a class="sum">
+                总计：<b>￥36</b>
+            </a>-->
+    <span class="link" data-link="../../html/order/order.html">完成录入</span>
+    <span class="link" data-link="../../html/order/order_msg_import.html">继续录入</span>
+  </p>
+</div>
+<div class="pingTai_pop">
+  <div class="pingTai">
+    <p>
+      <img src="assets/img/order/xiao_mei.png" style="width: 21px;"/>
+      <span>美团外卖</span>
+    </p>
+    <p>
+      <img src="assets/img/order/xiao_e.png"/>
+      <span>饿了么</span>
+    </p>
+    <p>
+      <img src="assets/img/order/xiao_bai.png" style="width: 16px;"/>
+      <span>百度外卖</span>
+    </p>
+    <p>
+      <img src="assets/img/order/xiao_jiesu.png"/>
+      <span>捷速外卖</span>
+    </p>
+  </div>
+</div>
+<div class="beizhu_pop">
+  <div class="beizhu">
+    <p>轻拿轻放</p>
+    <p>用保温箱装</p>
+    <p>请尽快赶时间</p>
+  </div>
+</div>

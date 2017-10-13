@@ -1,0 +1,37 @@
+page-demo3 {
+  .main{
+    width: 100%;
+    height: 100%;
+    padding: 0;
+    margin: 0;
+  }
+  .map-container{
+    width: 100%;
+    height: 50%;
+  }
+  .map{
+    width: 100%;
+    height: 100%;
+  }
+  .site-container{
+    width: 100%;
+    height: 50%;
+  }
+  .first-site{
+    width: 100%;
+    height: 20%;
+  }
+  .more-site-container{
+    width: 100%;
+    height: 80%;
+  }
+  .more-site{
+    width: 100%;
+    height: 100%;
+  }
+
+  .more-site .site{
+    width: 100%;
+    height: 25%;
+  }
+}

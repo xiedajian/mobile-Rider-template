@@ -1,0 +1,30 @@
+<!--
+  Generated template for the DemoPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>demo</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+  <!--利用[navPush]属性绑定的变量来控制跳转下一页，相当于navCrtl,push()-->
+  <p [navPush]="demo2Page">跳转至demo2页面</p>
+
+  <p>{{obj.num}}</p>
+  <p *ngFor="let li of obj.lists; index as i" ><span *ngIf="li.tab===num">{{li.val}}</span></p>
+
+  <button (click)="taggleNum()">切换列表</button>
+  <button (click)="num=1">tab2</button>
+  <button (click)="num=2">tab1</button>
+
+  <!--<p *ngIf="listSocketDemoProvider.isShow">双向绑定listprovider测试</p>-->
+  <!--<span>{{ listSocketDemoProvider.str }}</span>-->
+
+</ion-content>
