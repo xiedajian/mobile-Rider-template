@@ -12,8 +12,8 @@
 
   <div class="mui-content">
     <!--悬浮按钮-->
-    <div class="xuanfu" id="xuanfu">
-      <img src="assets/img/order/tianjia.png" alt=""  class="tianjia"/>
+    <div class="xuanfu" id="xuanfu" >
+      <img src="assets/img/order/tianjia.png" alt=""  class="tianjia" (click)="xuanfu()" />
       <p class="quanBu"><img src="assets/img/order/quanbu.png"/><span>全部</span></p>
       <p class="bianji link" data-link="order_msg_import.html"><img src="assets/img/order/bianji.png"/></p>
       <p class="meituan"><img src="assets/img/order/meituan.png"/></p>
@@ -21,7 +21,7 @@
       <p class="eleme"><img src="assets/img/order/eleme.png"/></p>
     </div>
     <!--默认不显示，单机悬浮按钮的选项后进行显示相关内容-->
-    <div id="slider" class="mui-slider mui-fullscreen" style="display: none;">
+    <div id="slider" class="mui-slider mui-fullscreen" [hidden]="noData">
       <div id="sliderSegmentedControl" class="mui-scroll-wrapper mui-slider-indicator mui-segmented-control mui-segmented-control-inverted">
         <div class="mui-scroll">
           <a class="mui-control-item mui-active">
@@ -564,14 +564,14 @@
       <p class="btn publish">一键发单</p>
     </div>
     <!--刚进来是没有数据的，默认显示-->
-    <div class="none" >
+    <div class="none" [hidden]="!noData">
       <img src="assets/img/order/qishou.png" alt="" />
       <p class="none_tip">暂时没有数据</p>
       <p class="btn yjfd" style="display: none;">一键发单</p>
     </div>
   </div>
   <!--异常单里的取消弹框-->
-  <div class="yc_quxiao_pop" style="display: none;">
+  <div class="yc_quxiao_pop" [hidden]="!yc_quxiao_popShow">
     <div class="yc_quxiao">
       <p>提示</p>
       <p>有一个订单已被买家取消,请查看</p>
@@ -582,7 +582,7 @@
     </div>
   </div>
   <!--异常单里的忽略此单弹框-->
-  <div class="hl_Order_pop" style="display: none;">
+  <div class="hl_Order_pop"  [hidden]="!hl_Order_popShow">
     <div class="hlOrder">
       <p>请选择忽略订单的原因</p>
       <p class="hl">未完成配送</p>
@@ -590,7 +590,7 @@
     </div>
   </div>
   <!--异常单里的重新发单弹框-->
-  <div class="yc_begin_pop" style="display: none;">
+  <div class="yc_begin_pop"  [hidden]="!yc_begin_popShow">
     <div class="yc_begin">
       <p>提示</p>
       <p>确定要重新发布该订单吗？</p>
@@ -601,7 +601,7 @@
     </div>
   </div>
   <!--电话弹框-->
-  <div class="phone_pop" style="display: none;">
+  <div class="phone_pop"  [hidden]="!phone_popShow">
     <div class="phone">
       <p>18000000000</p>
       <p>
@@ -611,7 +611,7 @@
     </div>
   </div>
   <!--取消弹框-->
-  <div class="quxiao_pop" style="display: none;">
+  <div class="quxiao_pop"  [hidden]="!quxiao_popShow">
     <div class="quxiao">
       <p>确定订单取消将要扣取佣金</p>
       <p>
@@ -621,7 +621,7 @@
     </div>
   </div>
   <!--确认取消原因弹框-->
-  <div class="qxOrder_pop" style="display: none;">
+  <div class="qxOrder_pop" [hidden]="!qxOrder_popShow">
     <div class="qxOrder">
       <p>请选择取消订单的原因</p>
       <p class="qx">买家取消</p>
@@ -631,7 +631,7 @@
     </div>
   </div>
   <!--追加小费弹框-->
-  <div class="addPay_pop" style="display: none;">
+  <div class="addPay_pop" [hidden]="!addPay_popShow">
     <div class="addPay">
       <p>请输入小费金额</p>
       <p><input type="text"class="jine"/>元</p>
@@ -641,7 +641,7 @@
     </div>
   </div>
   <!--输入交易密码弹框-->
-  <div class="jiaoYi_pop" style="display: none;">
+  <div class="jiaoYi_pop" [hidden]="!jiaoYi_popShow">
     <div class="jiaoYi">
       <p>
         <img src="assets/img/user/xuanfen.png" alt="" />

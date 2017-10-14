@@ -1,6 +1,8 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 
+import {PopSerProvider} from '../../../providers/pop-ser/pop-ser';
+import {HttpApiListSerProvider} from '../../../providers/http-api-list-ser/http-api-list-ser';
 /**
  * Generated class for the SetYijianFadanPage page.
  *
@@ -14,8 +16,13 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
   templateUrl: 'set-yijian-fadan.html',
 })
 export class SetYijianFadanPage {
-
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+    bindEle:boolean=false;
+    bindMeituan:boolean=false;
+    bindBaidu:boolean=false;
+  constructor(public navCtrl: NavController,
+              public pop: PopSerProvider,
+              public httpList: HttpApiListSerProvider,
+              public navParams: NavParams) {
   }
 
   ionViewDidLoad() {

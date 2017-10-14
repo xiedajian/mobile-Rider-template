@@ -4,23 +4,26 @@
     <img src="assets/img/user/zhuye.png" alt=""/>
   </a>
   <h1 class="mui-title">个人中心</h1>
-  <a class="message link" data-link="../../html/enter/message.html" (click)="toMegPage()">
+  <a class="message link"  [navPush]="'MessagePage'">
     <img src="assets/img/order/xiaoxi.png" alt=""/>
   </a>
 </header>
 <div class="mui-content">
   <div class="main-top">
     <p>
-      <img src="assets/img/user/touxiang.png" class="tx"/>
+      <img [src]="userPortal" class="tx"/>
       <img src="assets/img/user/bianji.png" alt="" />
-      <input type="file" id="file1" name="file1" />
+      <!--<input type="file" id="file1" name="file1" (change)="updateUserImg(this.file1,$event)" />-->
+      <!--使用 ng2-file-upload 插件-->
+      <input #fileUpload type="file" id="file1" name="file1" ng2FileSelect [uploader]="uploader" (change)="selectedFileOnChanged($event)" />
     </p>
+
     <p>
       <img src="assets/img/user/jinbi.png" alt="" />
       <span>余额</span>
-      <b>566</b>
+      <b>{{money}}</b>
     </p>
-    <p class="link" data-link="../../html/user/renZheng_ziLiao.html">
+    <p class="link"  [navPush]="'RenzhengZiliaoPage'">
       <span>商家信息已验证</span><span>，点击查看</span>
     </p>
   </div>

@@ -10,7 +10,7 @@ import 'rxjs/add/operator/toPromise';
 export class HttpserProvider {
 
     constructor(public http: Http) {
-        // console.log('Hello HttpSerProvider Provider');
+        console.log('Hello HttpSerProvider Provider');
     }
 
     /**

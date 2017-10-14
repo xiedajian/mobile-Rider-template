@@ -22,4 +22,8 @@ export class ShenheIngPage {
     console.log('ionViewDidLoad ShenheIngPage');
   }
 
+  backLoginPage(){
+    this.navCtrl.popToRoot();
+  }
+
 }
