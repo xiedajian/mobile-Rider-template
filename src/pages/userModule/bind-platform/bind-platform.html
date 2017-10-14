@@ -12,17 +12,20 @@
     <div class="main_list">
       <p><img src="assets/img/user/meituan.png"/></p>
       <p>美团外卖</p>
-      <p class="link" data-link="bangDing_pingTai_1.html">去绑定</p>
+      <p class="link" data-link="bangDing_pingTai_1.html" *ngIf="!SOURCE_MEITUAN" (click)="bindMeituan()">去绑定</p>
+      <p class="link" data-link="bangDing_pingTai_1.html" *ngIf="SOURCE_MEITUAN">已绑定</p>
     </div>
     <div class="main_list">
       <p><img src="assets/img/user/baidu.png"/></p>
       <p>百度外卖</p>
-      <p class="link" data-link="bangDing_pingTai_1.html">去绑定</p>
+      <p class="link" data-link="bangDing_pingTai_1.html" *ngIf="!SOURCE_BAIDU" (click)="bindBaidu()">去绑定</p>
+      <p class="link" data-link="bangDing_pingTai_1.html" *ngIf="SOURCE_BAIDU">已绑定</p>
     </div>
     <div class="main_list">
       <p><img src="assets/img/user/eleme.png"/></p>
       <p>饿了吗</p>
-      <p class="link" data-link="bangDing_pingTai_1.html">去绑定</p>
+      <p *ngIf="!SOURCE_ELEMA" (click)="bindEle()">去绑定</p>
+      <p *ngIf="SOURCE_ELEMA">已绑定</p>
     </div>
     <div class="txt">
       <p>
