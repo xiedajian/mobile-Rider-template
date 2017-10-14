@@ -10,24 +10,25 @@
   </header>
   <div class="mui-content">
     <div class="main_top">
-      <p class="link" data-link="updata_enter_miMa.html">
+      <p class="link" data-link="updata_enter_miMa.html" [navPush]="'UpdateEnterPwdPage'">
         <span><img src="assets/img/user/shezhi_1.png"/></span>
         <span>修改登录密码</span>
         <span><img src="assets/img/user/xuanfen.png"/></span>
       </p>
       <!--如果没有交易密码就进入设置交易密码，如果设置过交易密码就进入修改交易密码-->
       <!--<p class="link" data-link="set_jiaoYi_miMa.html">-->
-      <p class="link" data-link="updata_jiaoYi_miMa.html">
-        <span><img src="assets/img/order/jiaoyi.png"/></span>
+      <p class="link" data-link="updata_jiaoYi_miMa.html" [navPush]="'SetJiaoyiMimaPage'">
+        <span><img src="assets/img/order/jiaoyi.png" /></span>
         <span>交易密码</span>
         <span><img src="assets/img/user/xuanfen.png"/></span>
       </p>
       <p>
         <span><img src="assets/img/user/shezhi_2.png"/></span>
         <span>开始提示音</span>
-        <span class="switch"><i class="circel"></i></span>
+        <!--<span class="switch"><i class="circel"></i></span>-->
+        <span ><ion-toggle [(ngModel)]="tishiyin"></ion-toggle></span>
       </p>
-      <p class="link" data-link="yiJian_faDan.html">
+      <p class="link" data-link="yiJian_faDan.html" [navPush]="'SetYijianFadanPage'">
         <span><img src="assets/img/user/shezhi_3.png"/></span>
         <span>设置一键发单</span>
         <span><img src="assets/img/user/xuanfen.png"/></span>
@@ -35,19 +36,20 @@
       <p>
         <span><img src="assets/img/user/shezhi_4.png"/></span>
         <span>是否使用通知栏</span>
-        <span class="switch"><i class="circel"></i></span>
+        <!--<span class="switch"><i class="circel"></i></span>-->
+        <span ><ion-toggle [(ngModel)]="pepperoni"></ion-toggle></span>
       </p>
       <p>
         <span><img src="assets/img/user/shezhi_5.png"/></span>
         <span>版本号</span>
-        <span>1.0.0.0</span>
+        <span>1.0.0</span>
       </p>
-      <p class="link" data-link="abuto_us.html">
+      <p class="link" data-link="abuto_us.html" [navPush]="'AboutUsPage'">
         <span><img src="assets/img/user/shezhi_6.png"/></span>
         <span>关于我们</span>
         <span><img src="assets/img/user/xuanfen.png"/></span>
       </p>
     </div>
-    <p class="btn">退出登录</p>
+    <p class="btn" (click)="logout()">退出登录</p>
   </div>
 </ion-content>

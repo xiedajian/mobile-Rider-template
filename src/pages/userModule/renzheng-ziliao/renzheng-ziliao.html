@@ -1,5 +1,5 @@
-<header class="mui-bar mui-bar-nav">
-  <a class="mui-action-back">
+<ion-content><header class="mui-bar mui-bar-nav">
+  <a class="mui-action-back" navPop>
     <img src="assets/img/order/back.png" alt=""/>
   </a>
   <h1 class="mui-title">我的信息</h1>
@@ -15,19 +15,19 @@
   <div class="wzz_list">
     <div>
       <p>联系人：</p>
-      <p>张先生</p>
+      <p>{{userInfo.linkman}}</p>
       <p></p>
       <div style="clear: both;"></div>
     </div>
     <div>
       <p>店铺名称：</p>
-      <p>利好便利店</p>
+      <p>{{userInfo.shopName}}</p>
       <p></p>
       <div style="clear: both;"></div>
     </div>
     <div>
       <p class="lb_tit">店铺地址：</p>
-      <p class="lb txt">阿娇开始弄阑珊处阿娇三次怕2017年8月啊司法23日 11:19:45</p>
+      <p class="lb txt">{{userInfo.shopAddress}} {{userInfo.shopDetailAddress}}</p>
       <p></p>
       <div style="clear: both;"></div>
     </div>
@@ -35,23 +35,23 @@
   </div>
   <div class="main_top">
     <p class="tit">店铺门头与分组人合照：</p>
-    <img src=""/>
+    <img [src]="userInfo.shopLogo" />
   </div>
   <div class="main_top">
     <p class="tit">身份证正面照片：</p>
-    <img src=""/>
+    <img [src]="userInfo.corporationFornt"/>
   </div>
   <div class="main_top">
     <p class="tit">身份证背面照片：</p>
-    <img src=""/>
+    <img [src]="userInfo.corporationRear"/>
   </div>
   <div class="main_top">
     <p class="tit">营业执照照片</p>
-    <img src=""/>
+    <img [src]="userInfo.businessLicense"/>
   </div>
   <div class="main_top">
     <p class="tit">餐饮许可证照片</p>
-    <img src=""/>
+    <img [src]="userInfo.licenseImg"/>
   </div>
   <!--<div class="xieyi">
             <span class="dui"></span>
@@ -60,3 +60,4 @@
         </div>
         <p class="btn">提交审核</p>-->
 </div>
+  </ion-content>

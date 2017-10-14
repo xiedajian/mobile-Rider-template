@@ -1,5 +1,6 @@
+<ion-content>
 <header class="mui-bar mui-bar-nav">
-  <a class="mui-action-back">
+  <a class="mui-action-back" navPop>
     <img src="assets/img/order/back.png" alt=""/>
   </a>
   <h1 class="mui-title">设置一键发单</h1>
@@ -11,22 +12,29 @@
   <div class="main_top">
     <p>
       <span>绑定饿了么商家帐号</span>
-      <span class="switch"><i class="circel"></i></span>
-      <span class="tip">未绑定</span>
+      <!--<span class="switch"><i class="circel"></i></span>-->
+      <span ><ion-toggle [(ngModel)]="bindEle"></ion-toggle></span>
+      <!--<span class="tip">未绑定</span>-->
+      <span class="tip">{{ bindEle ? '已绑定': '未绑定'}}</span>
 
     </p>
     <p>
       <span>绑定美团外卖商家帐号</span>
-      <span class="switch"><i class="circel"></i></span>
-      <span class="tip">未绑定</span>
+      <!--<span class="switch"><i class="circel"></i></span>-->
+      <span ><ion-toggle [(ngModel)]="bindMeituan"></ion-toggle></span>
+      <!--<span class="tip">未绑定</span>-->
+      <span class="tip">{{ bindMeituan ? '已绑定': '未绑定'}}</span>
 
     </p>
     <p>
       <span>绑定百度外卖商家帐号</span>
-      <span class="switch"><i class="circel"></i></span>
-      <span class="tip">未绑定</span>
+      <!--<span class="switch"><i class="circel"></i></span>-->
+      <span ><ion-toggle [(ngModel)]="bindBaidu"></ion-toggle></span>
+      <!--<span class="tip">未绑定</span>-->
+      <span class="tip">{{ bindBaidu ? '已绑定': '未绑定' }}</span>
 
     </p>
 
   </div>
 </div>
+  </ion-content>

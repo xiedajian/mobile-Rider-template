@@ -14,7 +14,8 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
   templateUrl: 'pingtai-set.html',
 })
 export class PingtaiSetPage {
-
+    pepperoni:boolean=false;
+    tishiyin:boolean=false;
   constructor(public navCtrl: NavController, public navParams: NavParams) {
   }
 
@@ -23,5 +24,8 @@ export class PingtaiSetPage {
   }
     backPage(){
         this.navCtrl.pop();
+    }
+    logout(){
+      this.navCtrl.setRoot('LoginPage');
     }
 }
