@@ -18,10 +18,16 @@
         <map-position-picker (outputPosition)="setPosition($event)" class="map"></map-position-picker>
     </div>
     <div class="site-container">
-        <button ion-item *ngIf="firstPosition" class="first-site">{{firstPosition.address}}</button>
+        <div ion-item *ngIf="firstPosition" class="first-site" >
+            <p (click)="selectAddress(firstPosition)">{{firstPosition.address}}</p>
+            </div>
         <ion-scroll #moreSite scrollY="true" class="more-site-container">
             <div *ngIf="morePostion" class="more-site">
-                <button ion-item *ngFor="let li of morePostion" class="site">{{li.address}}</button>
+                <div ion-item *ngFor="let li of morePostion" class="site" >
+                    <p (click)="selectAddress(li)">
+                        {{li.address}}
+                    </p>
+                   </div>
             </div>
         </ion-scroll>
     </div>

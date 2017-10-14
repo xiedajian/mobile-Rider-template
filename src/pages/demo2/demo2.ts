@@ -28,7 +28,7 @@ export class Demo2Page {
   }
 
   openModal(){
-    let modal=this.modalCtrl.create('MapSelectAddressPage');
+    let modal=this.modalCtrl.create('Demo3Page');
     modal.present();
   }
 

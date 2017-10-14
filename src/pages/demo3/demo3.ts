@@ -1,5 +1,7 @@
 import {Component,Input, OnChanges,OnInit , SimpleChange,ViewChild,ChangeDetectionStrategy ,ChangeDetectorRef} from '@angular/core';
 import {IonicPage, NavController, NavParams,Content } from 'ionic-angular';
+
+import {Events} from 'ionic-angular';
 /**
  * Generated class for the Demo3Page page.
  *
@@ -18,6 +20,7 @@ export class Demo3Page  {
 
     constructor(public navCtrl: NavController,
                 private cdRef: ChangeDetectorRef,
+                public events: Events,
                 public navParams: NavParams) {
     }
     @ViewChild('moreSite') moreSite: Content;
@@ -40,5 +43,13 @@ export class Demo3Page  {
         this.moreSite._scrollContent.nativeElement.scrollTop=0;
         //更新视图
         this.cdRef.detectChanges();
+    }
+
+    selectAddress(position:any){
+        console.log(position);
+        console.log(111);
+        this.events.publish('selectAddressOver',{'position':position});
+        this.navCtrl.pop();
+
     }
 }
