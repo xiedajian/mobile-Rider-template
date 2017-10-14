@@ -12,6 +12,8 @@ import {MapPositionModel} from '../../model/mapPositionModel';
  *    <script src="http://webapi.amap.com/maps?v=1.4.0&key=7c24ba9bd6a0b7b95d70ec6919e30c34&plugin=AMap.ToolBar"></script>
  *    <!-- 高德地图UI组件库 1.0 -->
  *   <script src="//webapi.amap.com/ui/1.0/main.js?v=1.0.11"></script>
+ *  2. 制作地图
+ *  3. 高德选点插件PositionPicker
  */
 
 @Component({
@@ -65,7 +67,7 @@ export class MapPositionPickerComponent {
                 });
                 //定位失败
                 AMap.event.addListener(geolocation, 'error', (err) => {
-                    console.log(err)
+                    console.log(err);
                 });
             });
 

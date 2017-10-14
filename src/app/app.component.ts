@@ -10,8 +10,8 @@ import { SplashScreen } from '@ionic-native/splash-screen';
   templateUrl: 'app.html'
 })
 export class MyApp {
-  // rootPage:any = 'OrderPage';
-  rootPage:any = 'LoginPage';
+  rootPage:any = 'OrderPage';
+  // rootPage:any = 'LoginPage';
 
   constructor(platform: Platform,
               // listsSocket: ListSocketDemoProvider,
