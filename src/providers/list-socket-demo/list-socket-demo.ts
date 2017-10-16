@@ -19,6 +19,8 @@ export class ListSocketDemoProvider {
     num: number = 0;
 
     str: string = '';
+    //是否已经建立连接
+    isLinkSuccess: boolean = false;
     //是否已经绑定userId
     isbindUserId: boolean = false;
 
@@ -66,6 +68,69 @@ export class ListSocketDemoProvider {
         // },1000);
     }
 
+
+    //建立websocket连接
+    toEstablishLink(){
+        let linkData = {
+            'type': 1,
+            'data': [],
+            'messageId': ['12345677']
+        }
+        console.log('去创建websock连接');
+        this.sendMessage(linkData);
+    }
+
+    //去绑定userid
+    toBindUserId(){
+        // this.isbindUserId=true;
+        let bindUserIdData = {
+            'type': 2,
+            'data': [46],
+            'messageId': ['55555']
+        }
+        console.log('去绑定userid连接');
+        this.sendMessage(bindUserIdData);
+    }
+
+    //回复消息表示收到推送消息
+    replyMessageId(messageId){
+        let replyData = {
+            'type': 3,
+            'result': true,
+            'messageId': messageId
+        }
+        this.sendMessage(replyData);
+    }
+
+    /***
+     *  socket返回消息进行分捡处理
+     *
+     */
+    messageHandle(data) {
+        console.log(data);
+        //对返回消息进行分类
+        // type : 1创建连接返回  2.绑定userid返回  3.
+        if (data.type == 1) {
+            console.log('建立websocket连接成功');
+            this.toBindUserId();
+            //是否已经建立连接
+            this.isLinkSuccess = true;
+        }else if(data.type == 2){
+            console.log('绑定userId成功');
+            this.isbindUserId=true;
+        }else if(data.type == 3){
+            console.log('回复消息表示收到订单推送');
+            console.log(data.messageId);
+            this.replyMessageId(data.messageId);
+        }
+    }
+
+    socketOnOpen(event) {
+        console.log("socket连接成功", event);
+        this.toEstablishLink();
+    }
+
+
     /**
      * socket发送消息
      * @param data   json对象
@@ -82,44 +147,6 @@ export class ListSocketDemoProvider {
         }
     }
 
-    /***
-     *  socket返回消息进行分捡处理
-     *
-     */
-    messageHandle(data) {
-        console.log('1111111111111111111');
-        console.log(data);
-        //对返回消息进行分类
-        if (data.type == 1) {
-            console.log('绑定userId成功');
-            this.isbindUserId=true;
-            let demoData = {
-                'type': 1,
-                'data': [46],
-                'messageId': ['12345677']
-            }
-            // this.sendMessage(demoData);
-        }
-    }
-
-    socketOnOpen(event) {
-        console.log("socket连接成功", event);
-        //连接成功进行userId绑定
-        let bindUserIdData = {
-            'type': 1,
-            'data': [],
-            'messageId': ['12345677']
-        }
-        this.isbindUserId=true;
-        this.toBindUserId(bindUserIdData);
-        // this.sendMessage(bindUserIdData);
-    }
-
-    toBindUserId(data){
-        console.log('去绑定userid');
-        this.sendMessage(data);
-    }
-
     socketOnMessage(event) {
         console.log("socket接收消息ok", event);
         this.messageHandle(JSON.parse(event.data));
@@ -127,9 +154,17 @@ export class ListSocketDemoProvider {
 
     socketOnClose(event) {
         console.log("socket连接关闭", event);
+        //是否已经建立连接
+        this.isLinkSuccess = false;
+        //是否已经绑定userId
+        this.isbindUserId = false;
     }
 
     socketOnError(closeEvent) {
         console.log("socket连接失败", closeEvent);
+        //是否已经建立连接
+        this.isLinkSuccess = false;
+        //是否已经绑定userId
+        this.isbindUserId = false;
     }
 }
