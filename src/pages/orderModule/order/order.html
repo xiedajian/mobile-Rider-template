@@ -41,19 +41,21 @@
           </a>
         </div>
       </div>
-
+      <!--<ion-scroll scrollY="true">-->
       <div class="mui-slider-group">
         <div id="item1mobile" class="mui-slider-item mui-control-content mui-active">
+
           <div id="scroll1" class="mui-scroll-wrapper">
+
             <div class="mui-scroll">
-              <div class="main">
+              <div class="main" *ngFor="let order of orderListSer.orderLists">
                 <div class="main_two">
                   <div class="main_two_list">
                     <div class="two_list_top">
-                      <p><img src="assets/img/user/meituan.png"/></p>
+                      <p><img src="{{order.order.ordersourcetype | waimai}}"/></p>
                       <p>
-                        <span>美团外卖</span>
-                        <span class="mui-ellipsis">000000000000000</span>
+                        <span>{{order.order.orderSourceTypeMode.name}}</span>
+                        <span class="mui-ellipsis">{{order.order.platformorderid}}</span>
                       </p>
                       <p class="check"><img src="assets/img/order/xuankuang.png" class="wxz"/></p>
                       <p class="link look" data-link="order_detail.html">
@@ -64,74 +66,39 @@
                       <p>配送地址:</p>
                       <p>
 						    						<span>
-						    							<i>小明</i>
-						    							<i>18000000000</i>
-						    							<a href="tel:00000000000"><img src="assets/img/order/iphone.png" alt="" /></a>
+						    							<i>{{order.order.consignss}}</i>
+						    							<i>{{order.order.phonelist}}</i>
+						    							<a href="tel:{{order.order.phonelist}}"><img src="assets/img/order/iphone.png" alt="" /></a>
 						    						</span>
-                        <span class="mui-ellipsis">中原国家广告产业园7号楼3层</span>
+                        <span class="mui-ellipsis">{{order.order.address}}</span>
                       </p>
                     </div>
                     <div class="two_list_three">
-                      <ul>
-                        <li>
-                          <span class="mui-ellipsis">西红柿炒鸡蛋盖浇饭</span>
-                          <span>x1</span>
-                          <span>￥9</span>
-                        </li>
-                        <li>
-                          <span class="mui-ellipsis">西红柿炒鸡蛋盖浇饭</span>
-                          <span>x1</span>
-                          <span>￥9</span>
-                        </li>
-                        <li>
-                          <span class="mui-ellipsis">西红柿炒鸡蛋盖浇饭</span>
-                          <span>x1</span>
-                          <span>￥9</span>
-                        </li>
-                        <li>
-                          <span class="mui-ellipsis">西红柿炒鸡蛋盖浇饭</span>
-                          <span>x1</span>
-                          <span>￥9</span>
-                        </li>
-                        <li>
-                          <span class="mui-ellipsis">西红柿炒鸡蛋盖浇饭</span>
-                          <span>x1</span>
-                          <span>￥9</span>
-                        </li>
-                        <li>
-                          <span class="mui-ellipsis">西红柿炒鸡蛋盖浇饭</span>
-                          <span>x1</span>
-                          <span>￥9</span>
-                        </li>
-                        <li>
-                          <span>西红柿炒鸡蛋盖浇饭</span>
-                          <span>x1</span>
-                          <span>￥9</span>
-                        </li>
-                        <li>
-                          <span>西红柿炒鸡蛋盖浇饭</span>
-                          <span>x1</span>
-                          <span>￥9</span>
-                        </li>
+                        <ul *ngIf="order.order.items">
+                          <li *ngFor="let li of order.order.items">
+                            <span class="mui-ellipsis">{{li.name}}</span>
+                            <span>x{{li.quantity}}</span>
+                            <span>￥{{li.price}}</span>
+                          </li>
+                        </ul>
 
-                      </ul>
-                      <p class="more">
+                      <p class="more" hidden>
                         <span>展开更多</span>
                         <img src="assets/img/order/xiala.png" alt="" />
                       </p>
                       <div class="pay">
                         <p>
                           <span>商品费</span>
-                          <span>￥58</span>
+                          <span>￥{{order.order.itemstotlaprice}}</span>
                         </p>
                         <p>
-                          <span>商品费</span>
-                          <span>￥5</span>
+                          <span>配送费</span>
+                          <span>￥{{order.order.deliverfee}}</span>
                         </p>
                       </div>
                       <div class="zongJi">
                         <span>总计：</span>
-                        <span>￥61</span>
+                        <span>￥{{order.order.totalprice}}</span>
                       </div>
                     </div>
                     <div class="two_list_five">
@@ -147,8 +114,9 @@
               </div>
 
             </div>
-          </div>
 
+          </div>
+          <!--</ion-scroll>-->
         </div>
         <!--<div id="item2mobile" class="mui-slider-item mui-control-content">
                       <div class="mui-scroll-wrapper">
