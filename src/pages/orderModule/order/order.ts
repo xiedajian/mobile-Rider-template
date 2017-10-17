@@ -16,11 +16,13 @@ declare var $: any;
 export class OrderPage {
     UserPage: string = 'UserPage';
     MessagePage: string = 'MessagePage';
+
+    orderListSer:any;
     //当前选择的选项卡，默认是第一个
     selectTab: number = 1;
 
     //是否有订单数据
-    noData:boolean=true;
+    noData:boolean=false;
     //异常单里的取消弹框
     yc_quxiao_popShow:boolean=false;
     //异常单里的忽略此单弹框
@@ -47,6 +49,8 @@ export class OrderPage {
                 public httpList: HttpApiListSerProvider,
                 public navParams: NavParams) {
         var userId= window.localStorage.getItem('userId');
+        this.orderListSer=listSocketDemoProvider;
+        console.log(this.orderListSer.orderLists);
         if( userId && userId!='' ){
             ///拖动悬浮按钮
             document.addEventListener('DOMContentLoaded', function () {
