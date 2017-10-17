@@ -46,7 +46,12 @@ page-order{
     box-shadow: none;
     -webkit-box-shadow: none;
   }
-
+  .mui-bar-nav~.mui-content .mui-slider.mui-fullscreen{
+    overflow: scroll;
+  }
+  .mui-scroll-wrapper{
+    overflow: scroll;
+  }
   .shouye,
   .message {
     display: inline-block;
@@ -455,6 +460,7 @@ page-order{
     position: fixed;
     left: 50%;
     bottom: 20px;
+    z-index: 9;
   }
   /*/////////////////////*/
   .main{
