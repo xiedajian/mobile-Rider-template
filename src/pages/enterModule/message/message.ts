@@ -48,6 +48,9 @@ export class MessagePage {
         })
     }
 
+    gotoDetail(news){
+        this.navCtrl.push('NewDetailPage',{news:news});
+    }
 
     //获取未读消息
     setMessageToRead(id) {

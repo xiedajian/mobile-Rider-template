@@ -46,7 +46,8 @@
             </p>
         </div>
 
-        <div class="list" *ngFor="let li of messageList" (click)="setMessageToRead(li.id)">
+        <!--<div class="list" *ngFor="let li of messageList" (click)="setMessageToRead(li.id)">-->
+        <div class="list" *ngFor="let li of messageList" (click)="gotoDetail(li)">
             <p>
                 <img src="assets/img/enter/xiaoxi_2.png"/>
             </p>
