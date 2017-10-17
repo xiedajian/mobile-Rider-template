@@ -15,7 +15,7 @@ export class ListSocketDemoProvider {
     //socket实例
     ws: WebSocket;
     //订单列表
-    lists: any[] = [];
+    orderLists: any[] = [];
     num: number = 0;
 
     str: string = '';
@@ -120,7 +120,8 @@ export class ListSocketDemoProvider {
             this.isbindUserId=true;
         }else if(data.type == 3){
             console.log('回复消息表示收到订单推送');
-            console.log(data.messageId);
+            // console.log(data.messageId);
+            this.orderLists=data.data;
             this.replyMessageId(data.messageId);
         }
     }
