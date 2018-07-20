@@ -1,0 +1,82 @@
+<!doctype html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link href="../../css/mui.min.css" rel="stylesheet" />
+		<link rel="stylesheet" href="../../css/user/wanCheng_order.css" />
+	</head>
+
+	<body>
+		<header class="mui-bar mui-bar-nav">
+		    <a class="mui-action-back">
+				<img src="../../img/enter/icon_back@2x.png" alt=""/>
+			</a>
+		   <h1 class="mui-title">完成订单</h1>
+		    <a class="lianxi link" data-link="../../html/user/order_select.html">
+				<img src="../../img/user/shousuo.png" alt="" />
+			</a>
+		</header>
+		<!--有内容的情况-->
+		<div class="mui-content">
+			<!--上拉加载区域-->
+		    <div id="pullrefresh" class="mui-content mui-scroll-wrapper">
+			    <div class="mui-scroll">
+		     	    <div class="main">				    	
+				    	<div class="main_two">
+				    		<!--加载内容-->
+				    		<div>
+				    			<p class="main_tit">本月</p>
+					    		<div class="main_two_list">
+					    			<div class="two_list_top link" data-link="wanCheng_order_detail.html">
+					    				<p><img src="../../img/user/meituan.png"/></p>
+					    				<p>
+					    					<span>美团外卖</span>
+					    					<span class="mui-ellipsis">000000000000000</span>
+					    				</p>
+					    				<p>
+					    					<span>2017-6-16</span><span>10:13</span>
+					    				</p>
+					    			</div>
+					    			<div class="two_list_mid link"  data-link="wanCheng_order_detail.html">
+					    				<div>
+					    					<p>取</p>
+					    					<p>
+					    						<span class="mui-ellipsis">杨国福麻辣烫</span>
+					    						<span class="mui-ellipsis">中原国家产业园2号楼厚街店铺</span>
+					    					</p>
+					    				</div>
+					    				<div>
+					    					<p>送</p>
+					    					<p class="mui-ellipsis">中原国家广告产业园7号楼3层</p>
+					    				</div>
+					    			</div>
+					    			<div class="two_list_bot">
+					    				<p class="del">删除</p>
+					    			</div>
+					    		</div>
+				    		</div>
+				    		<!--加载内容结束-->
+				    	</div>
+				    </div>
+			    </div>
+			</div>		    
+		</div>	
+		<!--当什么也没有的情况，默认为不显示，请根据情况进行显示与否-->
+		<div class="none">
+			<img src="../../img/user/none.png"/>
+			<p>什么都没有......</p>
+		</div>
+		<script src="../../js/mui.min.js"></script>
+		<script src="../../js/jquery-1.7.2.js"></script>
+		<script src="../../js/tiaozhuan.js"></script>
+		<script src="../../js/user/wanCheng_order.js"></script>
+		<script type="text/javascript">
+			mui.init();
+			
+		</script>
+	</body>
+
+</html>

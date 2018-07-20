@@ -1,0 +1,53 @@
+<!doctype html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link href="../../css/mui.min.css" rel="stylesheet" />
+		<link rel="stylesheet" href="../../css/order/shangChuan_pic.css" />
+	</head>
+
+	<body>
+		<header class="mui-bar mui-bar-nav">
+		    <a class="mui-action-back left">
+		   	 <img src="../../img/enter/icon_back@2x.png" alt=""/>
+		   </a>
+		    <h1 class="mui-title">上传照片</h1>
+		</header>
+		<div class="mui-content">		    
+		    <div class="container">
+		        <!--    照片添加    -->
+		        <div class="z_photo">
+		        	<p class="tit">点击上传取货照片</p>
+		            <div class="z_file">
+		                <input type="file" name="file" id="file" value="" accept="image/*" multiple onchange="imgChange('z_photo','z_file');" />
+		
+		            </div>
+		
+		        </div>
+		
+		        <!--遮罩层-->
+		        <div class="z_mask">
+		            <!--弹出框-->
+		            <div class="z_alert">
+		                <p>确定要删除这张图片吗？</p>
+		                <p>
+		                    <span class="z_cancel">取消</span>
+		                    <span class="z_sure">确定</span>
+		                </p>
+		            </div>
+		        </div>
+		    </div>
+            <button>确定</button>
+		</div>
+		<script src="../../js/mui.js"></script>
+		<script src="../../js/jquery-1.7.2.js"></script>
+		<script src="../../js/order/shangChuan_pic.js"></script>
+		<script type="text/javascript">
+			mui.init(); 
+		</script>
+	</body>
+
+</html>

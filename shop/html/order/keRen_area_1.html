@@ -1,0 +1,163 @@
+<!doctype html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link href="../../css/mui.min.css" rel="stylesheet" />
+        <script type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&ak=FyXiUZxKpwebuiD8g1H1cIu4guMvZ9zL	"></script>
+		<link rel="stylesheet" href="../../css/order/keRen_area_1.css" />
+	</head>
+
+	<body>
+		<header class="mui-bar mui-bar-nav">
+			<a class="mui-action-back">
+				<img src="../../img/order/back.png" alt="" />
+			</a>
+			<h1 class="mui-title">选择地址</h1>
+
+		</header>
+		<div class="mui-content">
+			<div id="allmap"></div>
+			<div class="mui-input-row mui-search">
+				<div class="sear">
+			    	<img src="../../img/user/shousuo.png" alt="" class="sear_icon" />
+				    <input type="text" id="suggestId" size="20" placeholder="输入您要搜索的地址" class="search">
+				    <img src="../../img/user/quxiao.png" alt="" class="clear_icon"/>
+				</div>
+				<span class="ss">搜索</span>
+			</div>
+			
+			<div id="searchResultPanel"></div>
+			<div class="lishi_main cont">
+				<div class="tit">
+					<p class="lishi">
+						<img src="../../img/order/lishijialu.png"/>
+						<span>历史记录</span>
+					</p>					
+				</div>
+				<div class="main">
+					<ul class="lishi_txt">
+						<li>
+							<p>
+								<span class="mui-ellipsis">绿地中心千禧广场绿地中心千禧广场绿地中心千禧广场绿地中心千禧广场绿地中心千禧广场绿地中心千禧广场</span>
+								<span class="mui-ellipsis">郑州市金水区中央公郑州市金水区中央公园2号郑州市金水区中央公园2号郑州市金水区中央公园2号郑州市金水区中央公园2号郑州市金水区中央公园2号园2号</span>
+							</p>
+							<p>
+								<img src="../../img/order/shoucang4.png"/>
+							</p>
+						</li>
+						<li>
+							<p>
+								<span class="mui-ellipsis">绿地中心千禧广场</span>
+								<span class="mui-ellipsis">郑州市金水区中央公园2号</span>
+							</p>
+							<p>
+								<img src="../../img/order/shoucang4.png"/>
+							</p>
+						</li>
+						<li>
+							<p>
+								<span class="mui-ellipsis">绿地中心千禧广场</span>
+								<span class="mui-ellipsis">郑州市金水区中央公园2号</span>
+							</p>
+							<p>
+								<img src="../../img/order/shoucang4.png"/>
+							</p>
+						</li>
+						<li>
+							<p>
+								<span class="mui-ellipsis">绿地中心千禧广场</span>
+								<span class="mui-ellipsis">郑州市金水区中央公园2号</span>
+							</p>
+							<p>
+								<img src="../../img/order/shoucang4.png"/>
+							</p>
+						</li>
+						<li>
+							<p>
+								<span class="mui-ellipsis">绿地中心千禧广场</span>
+								<span class="mui-ellipsis">郑州市金水区中央公园2号</span>
+							</p>
+							<p>
+								<img src="../../img/order/shoucang4.png"/>
+							</p>
+						</li>
+					</ul>			
+					<p class="clear">清除历史纪录</p>
+				</div>
+			</div>
+		    <div class="liebiao_main cont">
+				<div class="tit">
+					<p class="lishi">
+						<img src="../../img/order/fujin.png"/>
+						<span>请从列表选择</span>
+					</p>					
+				</div>
+				<div class="main">
+					<ul class="lishi_txt">
+						<li>
+							<p>
+								<span class="mui-ellipsis">绿地中心千禧广场</span>
+								<span class="mui-ellipsis">郑州市金水区中央公园2号</span>
+							</p>
+							<p>
+								<img src="../../img/order/shoucang4.png"/>
+							</p>
+						</li>
+						<li>
+							<p>
+								<span class="mui-ellipsis">绿地中心千禧广场</span>
+								<span class="mui-ellipsis">郑州市金水区中央公园2号</span>
+							</p>
+							<p>
+								<img src="../../img/order/shoucang4.png"/>
+							</p>
+						</li>
+						<li>
+							<p>
+								<span class="mui-ellipsis">绿地中心千禧广场</span>
+								<span class="mui-ellipsis">郑州市金水区中央公园2号</span>
+							</p>
+							<p>
+								<img src="../../img/order/shoucang4.png"/>
+							</p>
+						</li>
+						<li>
+							<p>
+								<span class="mui-ellipsis">绿地中心千禧广场</span>
+								<span class="mui-ellipsis">郑州市金水区中央公园2号</span>
+							</p>
+							<p>
+								<img src="../../img/order/shoucang4.png"/>
+							</p>
+						</li>
+						<li>
+							<p>
+								<span class="mui-ellipsis">绿地中心千禧广场</span>
+								<span class="mui-ellipsis">郑州市金水区中央公园2号</span>
+							</p>
+							<p>
+								<img src="../../img/order/shoucang4.png"/>
+							</p>
+						</li>
+					</ul>			
+					<p class="clear">清除历史纪录</p>
+				</div>
+			</div>
+		</div>
+
+		<script src="../../js/mui.min.js"></script>
+		<script src="../../js/jquery-1.7.2.js"></script>
+		<script src="../../js/tiaozhuan.js"></script>
+		<script src="../../js/order/keRen_area_1.js"></script>
+		
+		<script type="text/javascript">
+			mui.init();
+
+			
+		</script>
+	</body>
+
+</html>

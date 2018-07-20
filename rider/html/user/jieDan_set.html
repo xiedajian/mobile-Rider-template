@@ -1,0 +1,82 @@
+<!doctype html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link href="../../css/mui.min.css" rel="stylesheet" />
+		<link rel="stylesheet" href="../../css/mui.picker.min.css" />
+		<link rel="stylesheet" href="../../css/user/jieDan_set.css" />
+	</head>
+
+	<body>
+		<header class="mui-bar mui-bar-nav">
+		    <a class="mui-action-back">
+				<img src="../../img/enter/icon_back@2x.png" alt=""/>
+			</a>
+		   <h1 class="mui-title">接单设置</h1>		    
+		</header>
+		<div class="mui-content">
+		   <div class="main_one">
+		   	    <p>接单开始时间</p>
+		   	    <p id="start">
+		   	    	<span class="start_h">06</span>
+		   	    	<span class="start_i">59</span>
+		   	    </p>
+		   </div>
+		   <div class="main_one">
+		   	    <p>接单结束时间</p>
+		   	    <p id="end">
+		   	    	<span class="end_h">20</span>
+		   	    	<span class="end_i">00</span>
+		   	    </p>
+		   </div>
+		   <div class="main_one1">
+		   	    <p>每周上班日</p>
+		   	    <p class="day">
+		   	    	<span><i>一</i></span>
+		   	    	<span><i>二</i></span>
+		   	    	<span><i>三</i></span>
+		   	    	<span><i>四</i></span>
+		   	    	<span><i>五</i></span>
+		   	    	<span><i>六</i></span>
+		   	    	<span><i>日</i></span>
+		   	    </p>
+		   </div>
+		   
+		   <p class="btn">保存</p>
+		   <div class="com_pop">
+				<div class="com">
+					<p>修改登录密码</p>
+					<p class="tip">保存成功</p>
+					<p class="enter">确定</p>
+				</div>
+			</div>
+		</div>	
+		<script src="../../js/mui.min.js"></script>
+		<script src="../../js/jquery-1.7.2.js"></script>
+		<script src="../../js/mui.picker.min.js"></script>
+		<script src="../../js/tiaozhuan.js"></script>
+		<script src="../../js/user/jieDan_set.js"></script>
+		<script type="text/javascript">
+			mui.init();
+			$('.btn').on('tap', function() {				
+				$('.com_pop').css('display','block');	
+			})
+			$('.enter').on('tap',function(){
+				 $('.com_pop').css('display','none');
+				 mui.openWindow({
+						url: '../..//html/user/set.html',
+						id:  '../..//html/user/set.html',
+						show: {
+							aniShow: 'zoom-fade-out',
+							duration: 300
+						}
+					})
+						
+			})
+		</script>
+	</body>
+
+</html>

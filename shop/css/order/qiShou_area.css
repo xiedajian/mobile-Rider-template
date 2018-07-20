@@ -1,0 +1,181 @@
+body{
+	width: 100%;
+	height: 100%;
+	font-family: "微软雅黑";
+	color: black;
+	background: #f5f5f5;
+}
+html{
+	width: 100%;
+	height: 100%;
+	
+}
+*{
+	margin: 0;
+	padding: 0;
+}
+li { list-style:none; }
+a { text-decoration:none;color: black }
+img { border:none;}  /* 去除IE下默认边框,顶部对齐 */
+p{margin: 0;padding: 0;}
+.mui-bar{
+	height:44px;
+	line-height: 44px;
+	background: #6A4A23;
+	box-shadow: none;
+	-webkit-box-shadow: none;
+}
+.mui-action-back{
+	display: inline-block;
+	width: 44px;
+	height: 44px;
+}
+header img{
+	width:10px;
+	height: 17px;
+	position: absolute;
+	top:13px;
+}
+.mui-title{
+	color: #fff;
+	font-size: 16px;
+	right: 15px !important;
+}
+.mui-title span{
+	float: right;
+	font-size: 14px;
+}
+.mui-content{
+	margin-bottom: 50px;
+	width: 100%;
+	background: #f5f5f5;
+
+}
+.amap-logo{
+	display: none;
+}
+.amap-marker-label{
+	padding: 13px 10px 5px;
+    max-width: 150px;
+    max-height: 40px;
+    overflow: hidden;
+    text-align: center;
+    font-size: 12px;
+    line-height: 23px;
+    border: none;
+	background: url(../../img/order/bm.png) 0% 0% / 100% 100% no-repeat;
+}
+/**/
+.main_one{
+	padding: 0 20px;
+	width: 100%;
+	background: #fff;
+	position: absolute;
+	left: 0;
+	bottom: 0;
+	z-index: 999;
+}
+.one_top{
+	width: 100%;
+	border-bottom: 1px dotted #dbdbdb;
+}
+.one_top p:nth-child(1){
+	padding: 2px;
+	margin-left: -27px;
+	width: 54px;
+	height: 54px;
+	overflow: hidden;
+	border-radius: 50%;
+	background: #fff;
+	position: absolute;
+	top: -27px;
+	left: 50%;
+}
+.one_top p:nth-child(1) img{
+	width: 50px;
+}
+.one_top p:nth-child(2){
+	margin-top:27px;
+	width: 100%;
+	height: 28px;
+	text-align: center;
+	line-height: 28px;
+	font-size: 14px;
+	position: relative;
+}
+.one_top p:nth-child(2) span{
+	display: inline-block;
+	color: #999;
+}
+.one_top p:nth-child(2) span:nth-child(2){
+	display: inline-block;
+	margin: 0 5px;
+	font-size: 25px;
+	position: absolute;
+	top: 0px;
+	left: 45%;
+}
+.one_top p:nth-child(2) span:nth-child(3){
+	margin-left: 15px;
+	color:#333;
+}
+.one_top p:nth-child(3){
+	margin-bottom: 10px;
+	width: 100%;
+	height: 15px;
+	text-align: center;
+	line-height: 15px;
+	font-size: 14px;
+	color: #CC3333;
+}
+.one_bot{
+	padding: 14px 0;
+	width: 100%;
+}
+.one_bot p{
+	width: 100%;
+	height: 23px;
+	text-align: center;
+	line-height: 23px;
+	font-size: 14px;
+	position: relative;
+}
+.one_bot p span{
+	display: inline-block;
+	float: left;
+	position: absolute;
+}
+.one_bot p span:nth-child(1){
+	margin-right: 15px;
+	color: #999;
+	top: 0;
+	left: 0;
+}
+.one_bot p:nth-child(1) span:nth-child(2){
+	color: #333;
+	top: 0;
+	left: 70px;
+}
+.one_bot p:nth-child(2) span:nth-child(2){
+	padding-left: 12px;
+	color: #CC3333;
+	background: url(../../img/order/dingwei.png) no-repeat 0 4px;
+	background-size: 8px 11px;
+	top: 0;
+	left: 70px;
+}
+.one_bot p:nth-child(1) span:nth-child(3){
+	position: absolute;
+	top: 0;
+	right: 0;
+}
+.one_bot p:nth-child(1) span:nth-child(3) a{
+	display: inline-block;
+	margin-left: 20px;
+	width: 30px;
+	height: 30px;
+	
+}
+.one_bot p:nth-child(1) span:nth-child(3) a img{
+	width: 100%;
+}

@@ -1,0 +1,189 @@
+<!doctype html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link href="../../css/mui.min.css" rel="stylesheet" />
+          <link rel="stylesheet" href="http://cache.amap.com/lbs/static/main1119.css"/>
+    <script type="text/javascript" src="http://webapi.amap.com/maps?v=1.3&key=a8e1a7970fbf0919d39456d9d78568d9&plugin=AMap.Autocomplete"></script>
+    <script type="text/javascript" src="http://cache.amap.com/lbs/static/addToolbar.js"></script>
+		<script src="https://webapi.amap.com/ui/1.0/main.js"></script>
+		<link rel="stylesheet" href="../../css/enter/keRen_area_1.css" />
+	</head>
+
+	<body>
+		<header class="mui-bar mui-bar-nav">
+			<a class="mui-action-back">
+				<img src="../../img/enter/icon_back@2x.png" alt="" />
+			</a>
+			<h1 class="mui-title">
+				<span>购买地址</span>
+				<span>·</span>
+				<span id="weizhi" class="weizhi"></span>
+				<span><img src="../../img/enter/xiala.png"/></span>
+			</h1>
+
+		</header>
+		<div class="mui-content">
+			<div id="allmap"></div>
+			<div class="mui-input-row mui-search">
+				<div class="sear">
+			    	<img src="../../img/enter/shousuo.png" alt="" class="sear_icon" />
+				    <input type="text" id="suggestId" size="20" placeholder="输入您要搜索的地址" class="search">
+				    <img src="../../img/enter/quxiao.png" alt="" class="clear_icon"/>
+				</div>
+				<span class="ss">搜索</span>
+			</div>
+			
+			<div id="searchResultPanel"></div>
+			<div class="lishi_main cont">
+				<div class="tit">
+					<p class="lishi">
+						<img src="../../img/enter/lishijialu.png"/>
+						<span>历史记录</span>
+					</p>					
+				</div>
+				<div class="main">
+					<ul class="lishi_txt">
+						<li>
+							<p>
+								<span>绿地中心千禧广场</span>
+								<span>郑州市金水区中央公园2号</span>
+							</p>
+							<p>
+								<img src="../../img/enter/shoucang4.png"/>
+							</p>
+						</li>
+						<li>
+							<p>
+								<span>绿地中心千禧广场</span>
+								<span>郑州市金水区中央公园2号</span>
+							</p>
+							<p>
+								<img src="../../img/enter/shoucang4.png"/>
+							</p>
+						</li>
+						<li>
+							<p>
+								<span>绿地中心千禧广场</span>
+								<span>郑州市金水区中央公园2号</span>
+							</p>
+							<p>
+								<img src="../../img/enter/shoucang4.png"/>
+							</p>
+						</li>
+						<li>
+							<p>
+								<span>绿地中心千禧广场</span>
+								<span>郑州市金水区中央公园2号</span>
+							</p>
+							<p>
+								<img src="../../img/enter/shoucang4.png"/>
+							</p>
+						</li>
+						<li>
+							<p>
+								<span>绿地中心千禧广场</span>
+								<span>郑州市金水区中央公园2号</span>
+							</p>
+							<p>
+								<img src="../../img/enter/shoucang4.png"/>
+							</p>
+						</li>
+					</ul>			
+					<p class="clear">清除历史纪录</p>
+				</div>
+			</div>
+		    <div class="liebiao_main cont">
+				<div class="tit">
+					<p class="lishi">
+						<img src="../../img/enter/fujin.png"/>
+						<span>请从列表选择</span>
+					</p>					
+				</div>
+				<div class="main">
+					<ul class="lishi_txt">
+						<li>
+							<p>
+								<span>绿地中心千禧广场</span>
+								<span>郑州市金水区中央公园2号</span>
+							</p>
+							<p>
+								<img src="../../img/enter/shoucang4.png"/>
+							</p>
+						</li>
+						<li>
+							<p>
+								<span>绿地中心千禧广场</span>
+								<span>郑州市金水区中央公园2号</span>
+							</p>
+							<p>
+								<img src="../../img/enter/shoucang4.png"/>
+							</p>
+						</li>
+						<li>
+							<p>
+								<span>绿地中心千禧广场</span>
+								<span>郑州市金水区中央公园2号</span>
+							</p>
+							<p>
+								<img src="../../img/enter/shoucang4.png"/>
+							</p>
+						</li>
+						<li>
+							<p>
+								<span>绿地中心千禧广场</span>
+								<span>郑州市金水区中央公园2号</span>
+							</p>
+							<p>
+								<img src="../../img/enter/shoucang4.png"/>
+							</p>
+						</li>
+						<li>
+							<p>
+								<span>绿地中心千禧广场</span>
+								<span>郑州市金水区中央公园2号</span>
+							</p>
+							<p>
+								<img src="../../img/enter/shoucang4.png"/>
+							</p>
+						</li>
+					</ul>			
+					<p class="clear">清除历史纪录</p>
+				</div>
+			</div>
+		</div>
+
+		<script src="../../js/mui.min.js"></script>
+		<script src="../../js/jquery-1.7.2.js"></script>
+		<script src="../../js/tiaozhuan.js"></script>
+		<script src="../../js/enter/keRen_area_1.js"></script>
+		
+		<script type="text/javascript">
+			mui.init();
+            $('.city').on('tap', function() {
+				AMapUI.setDomLibrary(Zepto);
+				//////加载MobiCityPicker，loadUI的路径参数为模块名中 'ui/' 之后的部分
+				AMapUI.loadUI(['misc/MobiCityPicker'], function(MobiCityPicker) {
+					var cityPicker = new MobiCityPicker({
+
+					});
+					//////监听城市选中事件
+					cityPicker.on('citySelected', function(cityInfo) {
+						////  //隐藏城市列表
+						cityPicker.hide();
+						$('.weizhi').html(cityInfo.name)
+
+						////  //选中的城市信息
+					});
+					//////显示城市列表，可以用某个click事件触发
+					cityPicker.show();
+				});
+			});
+			
+		</script>
+	</body>
+
+</html>

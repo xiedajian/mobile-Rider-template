@@ -1,0 +1,75 @@
+body{
+	width: 100%;
+	height: 100%;
+	font-family: "微软雅黑";
+	color: black;
+	background: #fff;
+}
+html{
+	width: 100%;
+	height: 100%;
+	
+}
+*{
+	margin: 0;
+	padding: 0;
+}
+li { list-style:none; }
+a { text-decoration:none;color: black }
+img { border:none;}  /* 去除IE下默认边框,顶部对齐 */
+p{margin: 0;padding: 0;}
+.mui-bar{
+	padding: 0 15px !important;
+	height:44px;
+	line-height: 44px;
+	background: #6A4A23;
+	box-shadow: none;
+	-webkit-box-shadow: none;
+}
+.mui-action-back{
+	display: inline-block;
+	width: 44px;
+	height: 44px;
+	position: relative;
+	
+}
+.mui-action-back img{
+	width:9px;
+	position: absolute;
+	top:14px;	
+}
+.mui-action-back{
+	float: left;
+}
+
+.mui-title{
+	color: #fff;
+	font-size: 16px;
+}
+.mui-content{
+	width: 100%;
+	background: #fff;
+	position: relative;
+
+}
+/**/
+.mui-content img{
+	margin-left: -37px;
+	width: 75px;
+	height: 75px;
+	position: absolute;
+	left: 50%;
+	top: 141px;
+}
+.mui-content p{
+	width: 100%;
+	height: 100px;
+	text-align: center;
+	line-height: 100px;
+	color: #6A4A23;
+	font-size: 14px;
+	position: absolute;
+	top: 217px;
+	left: 0;
+}
+/**/

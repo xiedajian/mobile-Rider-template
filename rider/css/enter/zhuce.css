@@ -1,0 +1,231 @@
+body{
+	width: 100%;
+	height: 100%;
+	font-family: "微软雅黑";
+	color: black;
+	background: #f5f5f5;
+}
+html{
+	width: 100%;
+	height: 100%;
+	
+}
+*{
+	margin: 0;
+	padding: 0;
+}
+li { list-style:none; }
+a { text-decoration:none;color: black }
+img { border:none;}  /* 去除IE下默认边框,顶部对齐 */
+p{margin: 0;padding: 0;}
+.mui-bar{
+	height:44px;
+	line-height: 44px;
+	background: #fff;
+	box-shadow: none;
+	-webkit-box-shadow: none;
+}
+.mui-action-back{
+	display: inline-block;
+	width: 44px;
+	height: 44px;
+}
+header img{
+	width:9px;
+	height: 16px;
+	position: absolute;
+	top:14px;
+}
+.mui-title{
+	color: #333;
+	font-size: 15px;
+}
+.mui-content{
+	width: 100%;
+	margin-bottom: 20px;
+	background: #f5f5f5;
+}
+.main{	
+	margin: auto;
+	margin-top: 70px;
+	padding: 0 25px;
+	width:84.375%;
+	background: #fff;
+	border-radius: 10px;
+	position: relative;
+}
+/*/////////*/
+.logo{
+	margin-left: -52px;
+	width: 105px;
+	height: 107px;
+	position: absolute;
+	top: -51px;
+	left: 50%;
+	overflow: hidden;
+}
+.logo img{
+	width:100%;
+}
+.shuRu{
+	padding-top: 62px;
+	padding-bottom: 32px;
+	width: 100%;
+}
+.shuRu div{
+	width: 100%;
+	height: 45px;
+	border-bottom: 1px solid #ccc;
+	position: relative;
+}
+
+.shuRu div:nth-child(1) span{
+	float: left;
+	display: inline-block;
+	width: 96%;
+	height: 45px;
+	line-height: 45px;
+	color: #333333;
+	font-size: 12px;	
+}
+.shuRu div:nth-child(1) img{
+	float: right;
+	margin-top: 17px;
+	width:7px;	
+}
+.shuRu div:nth-child(2){
+	border-bottom: none;
+}
+.shuRu div:nth-child(2) input{
+	float: left;
+    padding: 0;
+    margin: 0;
+	width:62%;
+	height: 45px;
+	line-height: 45px;
+	color: #333333;
+	font-size: 12px;	
+	border: none;
+	border-bottom: 1px solid #ccc;
+	border-radius: 0;
+}
+.shuRu div:nth-child(2) span{
+	display: inline-block;
+	width:38%;
+	height: 29px;
+	text-align: center;
+	line-height: 29px;
+	color: #fff;
+	font-size: 12px;
+	border-radius: 30px;
+	background: #6A4A23;
+	position: absolute;
+	right: 0;
+	bottom: -5px;	
+	z-index: 2;
+}
+.shuRu div:nth-child(3) input,
+.shuRu div:nth-child(5) input{
+	float: left;
+    padding: 0;
+    margin: 0;
+    padding-top: 3px;
+	width:100%;
+	height: 43px;
+	line-height: 43px;
+	color: #333333;
+	font-size: 12px;
+	border: none;	
+}
+.mui-input-row label~input{
+	width: 88%;
+	height: 45px;
+	line-height: 0px;
+	color: #333333;
+	font-size: 12px;
+}
+input[type=password],
+input[type=text]{
+	padding: 0;
+	padding-top: 3px;
+	margin-bottom: 0;
+	border: none;
+	color: #333333;
+	font-size: 12px;
+}
+.mui-icon-eye:before{
+	content:' ';
+}
+.mui-input-row .mui-input-password~.mui-icon-eye{
+	margin-top: 7px;
+	width: 17px;
+	height: 11px;
+	color: #fff;
+	background: url(../../img/enter/View@2x.png) no-repeat;
+	background-size:15px 11px ;
+}
+::-webkit-input-placeholder {color:#999;font-size: 12px;}
+::-moz-placeholder {color:#999;font-size: 12px;} /* firefox 19+ */
+:-ms-input-placeholder {color:#999;font-size: 12px;} /* ie */
+input:-moz-placeholder {color:#999;font-size: 12px;}
+
+.enter_register{
+	margin: auto;
+	margin-top: 33px;
+	width: 62.5%;
+	position: relative;
+	z-index: 2;	
+}
+.enter_register p{
+	width: 100%;
+	height:40px;
+	text-align: center;
+	line-height: 40px;
+	color: #fff;
+	font-size: 15px;
+	background: #6a4a23;
+	border-radius: 30px;
+}
+.xieyi{
+	width: 100%;
+	height: 50px;
+	text-align: center;
+	line-height: 50px;
+	color: #FFCC00;
+	font-size: 12px;
+}
+/**/
+.amap-ui-mobi-city-picker.light .topbar{
+	background-color: #fff !important;
+}
+.amap-ui-mobi-city-picker .topbar .title{
+	color: #333 !important;
+}
+.amap-ui-mobi-city-picker .search-box{
+		padding:0 !important;
+		font-size:.6rem !important;
+		border-radius: 15px !important;
+		padding-left:10px !important;
+}
+.amap-ui-mobi-city-picker, .amap-ui-mobi-city-picker input[type=text]{
+	height:30px;
+	background: transparent;
+}
+.amap-ui-mobi-city-picker .closebtn{
+	background:url(../../img/enter/icon_back@2x.png) no-repeat 15px center !important ;
+	background-size:12px 20px !important ;
+}
+.amap-ui-mobi-city-picker .city_anchor a{
+	    color: #6A4A23 !important;
+}
+.amap-ui-mobi-city-picker .listgroup .citylist .item,.amap-ui-mobi-city-picker .current_city,.amap-ui-mobi-city-picker.light .top_group .citylist .item{
+	color:#333 !important;
+	font-size:.7rem !important;
+}
+/**/
+::-webkit-scrollbar  
+{  
+    width: 0px;  
+    height: 0px;  
+    background-color:transparent;  
+}

@@ -1,0 +1,168 @@
+<!doctype html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link href="../../css/mui.min.css" rel="stylesheet" />
+        <link rel="stylesheet" type="text/css" href="../../css/order/order.css"/>
+	</head>
+
+	<body>
+		<header class="mui-bar mui-bar-nav">
+		   <a class="left link" data-link="../../html/user/user.html">
+		   	  <img src="../../img/order/wode.png"/>
+		   </a>
+		    <h1 class="mui-title">
+		    	<a class="mui-control-item b" href="#item1mobile" style="border-bottom: 3px solid #6A4A23;">
+					新任务
+				</a>
+				<a class="mui-control-item b" href="#item2mobile">
+					待取货
+				</a>
+				<a class="mui-control-item b" href="#item3mobile">
+					配送中
+				</a>			        
+		    </h1>
+		</header>
+		<!--开工后并且认证过才显示-->
+		<div class="mui-content">
+		    <div id="slider" class="mui-slider">
+				<div id="sliderSegmentedControl" class="mui-slider-indicator mui-segmented-control mui-segmented-control-inverted">
+					<a class="mui-control-item a " href="#item1mobile">
+						新任务
+					</a>
+					<a class="mui-control-item a" href="#item2mobile">
+						待取货
+					</a>
+					<a class="mui-control-item a" href="#item3mobile">
+						配送中
+					</a>			       
+				</div>
+				<div id="sliderProgressBar" class="mui-slider-progress-bar mui-col-xs-3"></div>
+				<div class="mui-slider-group">
+					<div id="item1mobile" class="mui-slider-item mui-control-content mui-active">
+						<div class="tiaojian">
+						 	<p class="tiaojian_tit">
+						 		<span>距离筛选</span>
+						 		<img src="../../img/enter/xiala.png"/>
+						 	</p>
+						 	<ul class="tiaojian_txt">
+						 		<li>
+						 			<span>500m</span>
+						 			<span>1km</span>
+						 			<span>2km</span>
+						 			<span>3km</span>
+						 			<span>5km</span>
+						 			<span>2km</span>
+						 			<span>3km</span>
+						 			<span>5km</span>
+						 		</li>
+						 	</ul>
+						</div>
+						<div id="scroll1" class="mui-scroll-wrapper">
+							<div class="mui-scroll">
+								<div class="aa bb">
+							        
+								</div>
+							    
+							</div>
+						</div>	
+						
+					</div>
+					<div id="item2mobile" class="mui-slider-item mui-control-content">
+						<div id="scroll2" class="mui-scroll-wrapper">
+							<div class="mui-scroll">
+								<div class="aa">
+							        
+								</div>
+							    
+							</div>
+						</div>	
+					</div>
+					<div id="item3mobile" class="mui-slider-item mui-control-content">
+						<div id="scroll3" class="mui-scroll-wrapper">
+							<div class="mui-scroll">
+								<div class="aa">
+							        
+							        </div>
+								</div>
+							    
+							</div>
+						</div>	
+					</div>
+				</div>					
+			</div>
+		</div>	
+		<!--未开工显示的页面，默认显示-->
+		<div class="wkg">
+	    	<img src="../../img/order/sys.png"/>
+	    	<p>扫一扫，xx为您配送</p>
+	    </div>
+	    <!--认证过后才显示的开工按钮-->
+		<p class="zhuangtai1"><span class="zhuangtai">开工</span></p>
+		<!--抢单出现的弹框1,形式一-->
+		<div class="qiangdan_pop">
+			<div class="qiangdan">
+				<p>订单被抢走</p>
+				<p>还有许多订单在排队，快去试试</p>
+				<p class="enter">继续抢单</p>
+			</div>
+		</div>
+		<!--抢单出现的弹框2，形式二-->
+		<div class="qiangdan_pop1">
+			<div class="qiangdan1">
+				<p>确认抢单？</p>			
+				<p>
+					<a class="enter"><i>确定</i></a>
+					<a class="cancel"><i>取消</i></a>
+				</p>
+			</div>
+		</div>		
+		<!--已送达出现的弹框-->
+		<div class="ysd_pop">
+			<div class="ysd">
+				<p>确定送达？</p>
+				<p>
+					<!--当客户没有支付餐费的时候显示-->
+					<!--餐费未支付,记得向客户收取。-->
+					
+					
+					
+					<!--当客户已支付餐费的时候显示-->
+					记得向客户说：祝您生活愉快！
+				</p>
+				
+				<p>
+					<a class="cancel"><i>取消</i></a>
+					<a class="enter"><i>确定</i></a>
+				</p>
+			</div>
+		</div>
+		<!--取消出现的弹框-->
+		<div class="quxiao_pop">
+			<div class="quxiao">
+				<p>订单被取消</p>
+				<p>商家已取消该订单，请及时沟通</p>
+				<p class="enter">确定</p>
+			</div>
+		</div>
+		<!--若没有认证显示，否则不显示-->
+		<nav class="mui-bar mui-bar-tab link" data-link="../../html/enter/wanShan_ziLiao.html">
+		    <p>您还未通过资料审核,不能进行接单</p>
+		    <p class="link" data-link="../../html/enter/wanShan_ziLiao.html">马上认证</p>
+		</nav>
+		<script src="../../js/mui.min.js"></script>
+		<script src="../../js/jquery-1.7.2.js"></script>
+	    <script src="../../js/mui.pullToRefresh.js" type="text/javascript" charset="utf-8"></script>
+	    <script src="../../js/mui.pullToRefresh.material.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../../js/tiaozhuan.js"></script>
+		<script src="../../js/order/order.js"></script>
+		<script type="text/javascript">
+			mui.init()
+			
+		</script>
+	</body>
+
+</html>

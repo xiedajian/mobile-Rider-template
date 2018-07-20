@@ -1,0 +1,58 @@
+<!doctype html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link href="../../css/mui.min.css" rel="stylesheet" />
+		<link rel="stylesheet" href="../../css/user/tiXian_zhangHu.css" />
+	</head>
+
+	<body>
+		<header class="mui-bar mui-bar-nav">
+		    <a class="mui-action-back">
+				<img src="../../img/enter/icon_back@2x.png" alt=""/>
+			</a>
+		    <h1 class="mui-title">提现账户</h1>
+		</header>
+		<div class="mui-content">
+			<div class="wzz_list">
+				<p class="link" data-link="zhangHao_bangDing_1.html">
+					<span>我的支付宝</span>
+					<span></span>
+					<span><img src="../../img/enter/right.png"/></span>
+				</p>	
+				<p class="link" data-link="zhangHao_bangDing.html">
+					<span>我的微信</span>
+					<span></span>
+					<span><img src="../../img/enter/right.png"/></span>
+				</p>				
+			</div>
+			<!--首次进入没有设置过提现密码，显示这一块-->
+			<div class="wzz_list set">
+				<p class="link" data-link = "set_tiXian_miMa.html">
+					<span>设置提现密码</span>
+					<span></span>
+					<span><img src="../../img/enter/right.png"/></span>
+				</p>				
+			</div>
+			<!--已经设置过提现密码的进来后是修改这块，默认display:none-->
+			<div class="wzz_list updata">				
+				<p>
+					<span>修改提现密码</span>
+					<span></span>
+					<span><img src="../../img/enter/right.png"/></span>
+				</p>
+			</div>
+		</div>	
+		
+		<script src="../../js/mui.min.js"></script>
+		<script src="../../js/jquery-1.7.2.js"></script>
+		<script src="../../js/tiaozhuan.js"></script>
+		<script type="text/javascript">
+			mui.init();			
+		</script>
+	</body>
+
+</html>

@@ -1,0 +1,58 @@
+<!doctype html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link href="../../css/mui.min.css" rel="stylesheet" />
+		<link rel="stylesheet" href="../../css/user/apply_jieYue_2.css" />
+	</head>
+
+	<body>
+		<header class="mui-bar mui-bar-nav">
+		    <a class="mui-action-back">
+				<img src="../../img/enter/icon_back@2x.png" alt=""/>
+			</a>
+		    <h1 class="mui-title">申请解约</h1>
+		</header>
+		<div class="mui-content">
+			<div>
+				<p>
+					<img src="../../img/user/jieyue.png" alt="" />
+					<span>解约原因</span>
+				</p>
+				<textarea name="" rows="" cols="" placeholder="通过审核后将无法使用捷达外卖接单"></textarea>
+			</div>
+			<p class="btn">确定</p>
+		</div>	
+		<div class="com_pop">
+			<div class="com">
+				<p>申请解约</p>
+				<p>申请解约成功！</p>
+				<p class="enter">确定</p>
+			</div>
+		</div>
+		<script src="../../js/mui.min.js"></script>
+		<script src="../../js/jquery-1.7.2.js"></script>
+		<script src="../../js/tiaozhuan.js"></script>
+		<script type="text/javascript">
+			mui.init();		
+			$('.btn').on('tap',function(){
+				$('.com_pop').css('display','block');
+				$('.enter').on('tap',function(){
+					$('.com_pop').css('display','none');
+					mui.openWindow({
+						url: '../..//html/user/set.html',
+						id:  '../..//html/user/set.html',
+						show: {
+							aniShow: 'zoom-fade-out',
+							duration: 300
+						}
+					})
+				})
+			})
+		</script>
+	</body>
+
+</html>

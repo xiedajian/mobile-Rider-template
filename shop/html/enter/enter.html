@@ -1,0 +1,77 @@
+<!doctype html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link href="../../css/mui.min.css" rel="stylesheet" />
+		<link rel="stylesheet" href="../../css/enter/enter.css" />
+	</head>
+
+	<body>
+		<div class="mui-content">
+		    <div class="logo" id="img_logo">
+		    	<img src="../../img/enter/logo.png" alt="" />
+		    </div>
+		    <div class="shuRu" id="shuru">
+		    	<div>
+		    		<img src="../../img/enter/denglu_1.png" alt="" />
+		    		<input type="number" id="phone" placeholder="请输入手机号" />
+		    	</div>
+		    	<div>
+		    		<img src="../../img/enter/denglu_2.png"/>
+		    		<input type="password" id="password" placeholder="请输入登录密码" />
+		    	</div>
+		    </div>
+		    <div class="forget link" data-link="forget_pwd.html">
+		    	忘记密码？
+		    </div>
+		    <div class="enter_register">
+		    	<p class="enter" >登录</p>
+		    	<p class="register link" data-link="register.html">注册</p>
+		    </div>
+		</div>
+		<script src="../../js/mui.min.js"></script>
+		<script src="../../js/jquery-1.7.2.js"></script>
+		<script src="../../js/tiaozhuan.js"></script>
+		<!--<script src="../../js/enter/enter.js"></script>-->
+		<script type="text/javascript">
+			mui.init();
+            var hei=$('body').height();
+            $('input').focus(function(){
+                $('.mui-content').css('height',hei);
+                $('body').css('height',hei);
+            })
+            $('.enter').on('tap', function() {
+                window.location.href = '../order/order.html';
+                return;
+            		if($('#phone').val() == '' && $('#password').val() == '') {
+            			alert('请输入手机号和密码！');
+            		}
+            		else if($('#phone').val() == '') {
+            			alert('请输入手机号！');
+            		}
+            		else if($('#password').val() == ''){
+            			alert('请输入密码！');
+            		}
+            		else if($('#phone').val() != '' && $('#password').val() != '') {
+            			 var password=$('#password').val();
+            			 var phone = document.getElementById('phone').value;
+            		   if(!(/^1(3|4|5|7|8)\d{9}$/.test(phone))) {
+            			     alert("手机号码有误，请重填");
+            		    }
+            			else if(password.length<6){
+            			     alert("密码长度必须大于六位！");
+            			}
+            			else{
+
+                       }
+
+            	    }
+
+            	})
+		</script>
+	</body>
+
+</html>

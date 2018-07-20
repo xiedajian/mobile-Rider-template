@@ -1,0 +1,43 @@
+<!doctype html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>审核中</title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link href="../../css/mui.min.css" rel="stylesheet" />
+		<link rel="stylesheet" href="../../css/enter/shenHe_ing.css" />
+	</head>
+	<body>
+		<header class="mui-bar mui-bar-nav">
+		    <a class="mui-action-back">
+				<img src="../../img/enter/icon_back@2x.png" alt=""/>
+			</a>
+		    <h1 class="mui-title">审核</h1>
+		</header>
+		<div class="mui-content">
+			<div class="tip">
+				<img src="../../img/enter/sh-ing.png" alt="" />
+				<p>提交成功！请耐心等待审核</p>
+			</div>
+		    <p class="btn link" data-link="../../html/order/order.html">去主页看看</p>
+		</div>	
+		<script src="../../js/mui.min.js"></script>
+		<script src="../../js/jquery-1.7.2.js"></script>
+		<script src="../../js/tiaozhuan.js"></script>
+		<script type="text/javascript">
+			mui.init();	
+			setTimeout(function(){
+				mui.openWindow({
+					url:"shenHe_over.html",
+					id: "shenHe_over.html",
+					show: {
+						aniShow: 'zoom-fade-out',
+						duration: 300
+					}
+				})
+			},5000)
+		</script>
+	</body>
+
+</html>

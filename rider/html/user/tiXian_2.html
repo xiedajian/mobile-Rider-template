@@ -1,0 +1,68 @@
+<!doctype html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link href="../../css/mui.min.css" rel="stylesheet" />
+		<link rel="stylesheet" href="../../css/user/tiXian_2.css" />
+	</head>
+
+	<body>
+		<header class="mui-bar mui-bar-nav">
+		    <a class="mui-action-back">
+				<img src="../../img/enter/icon_back@2x.png" alt=""/>
+			</a>
+		      <h1 class="mui-title">提现</h1>
+		</header>		
+		<div class="mui-content">		   
+		    <input type="text" class="main_two" placeholder="请输入密码"/>
+		    <p class="main_three">
+		    	确认
+		    </p>
+		</div>	
+		<div class="com_pop">
+			<div class="com">
+				<p class="com_tit"></p>
+				<p class="com_tip"></p>
+				<p class="com_enter">确定</p>
+			</div>
+		</div>
+		<script src="../../js/mui.min.js"></script>
+		<script src="../../js/jquery-1.7.2.js"></script>
+		<script src="../../js/tiaozhuan.js"></script>
+		<script src="../../js/user/tiXian_2.js"></script>
+		<script type="text/javascript">
+			mui.init();
+			$('.main_three').on('tap', function() {
+				if($('.main_two').val()==''){
+					$('.com_tit').html($('.mui-title').html());
+					$('.com_tip').html('请输入密码');
+					$('.com_pop').css('display','block');
+				}else{
+					$('.com_tit').html($('.mui-title').html());
+					$('.com_tip').html($('.mui-title').html()+'成功！');
+					$('.com_pop').css('display','block');
+					$('.com_enter').on('tap',function(){
+				    $('.com_pop').css('display','none');
+			
+					    mui.openWindow({
+							url: '../..//html/user/tiXian.html',
+							id:  '../..//html/user/tiXian.html',
+							show: {
+								aniShow: 'zoom-fade-out',
+								duration: 300
+							}
+						})
+					})
+				}
+					
+			})
+			$('.com_enter').on('tap',function(){
+				 $('.com_pop').css('display','none');
+			})
+		</script>
+	</body>
+
+</html>

@@ -1,0 +1,342 @@
+body{
+	width: 100%;
+	height: 100%;
+	background-color:#F5F5F5 ;
+	font-family: "微软雅黑";
+	color: black;
+}
+html{
+	width: 100%;
+	height: 100%;
+}
+*{
+	margin: 0;
+	padding: 0;
+}
+li { list-style:none; }
+a { text-decoration:none;color: black }
+img { border:none;}  /* 去除IE下默认边框,顶部对齐 */
+p{margin: 0;padding: 0;}
+.mui-bar{
+	height:44px;
+	line-height: 44px;
+	background-color:#fff;
+	box-shadow: none;
+	-webkit-box-shadow: none;
+	border-bottom: 1px solid #ccc;
+}
+header a.left{
+	display: inline-block;
+	width: 44px;
+	height: 44px;
+}
+header a.left img{
+	width:9px;
+	position: absolute;
+	top:14px;
+}
+.mui-title{
+	color: #333333;
+	font-size: 15px;
+}
+
+.mui-content{
+	width: 100%;
+	height: 100%;
+	background: #f5f5f5;
+}
+/*地图*/
+#allmap{
+	width: 100%;
+	height:100%;
+}
+/*百度地图右下角标志隐藏不见*/
+.anchorBL{
+	display: none;
+}
+/*信息提示窗口*/
+.BMap_bubble_content{
+	width: 42px !important;
+	height: 42px !important;
+	border-radius: 50%;
+}
+.BMap_pop>div:nth-child(1),
+.BMap_pop>div:nth-child(2),
+.BMap_pop>div:nth-child(3),
+.BMap_pop>div:nth-child(4),
+.BMap_pop>div:nth-child(5),
+.BMap_pop>div:nth-child(6),
+.BMap_pop>div:nth-child(7),
+.BMap_pop>div:nth-child(8){
+	display: none !important;
+}
+.BMap_pop>img{
+	display: none !important;
+}
+.BMap_pop>div:nth-child(9){
+	width: 42px !important;
+	height: 42px !important;
+	z-index: 999 !important;
+	top:50px !important;
+	left: 90px !important;
+}
+.BMap_pop>div:nth-child(9)>div:nth-child(1){
+	display: none !important;
+}
+.BMap_shadow{
+    display: none !important;
+}
+/**/
+.BMapLabel{
+	width: 42px !important;
+	height: 42px !important;
+	border-radius: 50% !important;
+	/*background: #fff !important;*/
+	overflow: hidden !important;
+	background: url(../../img/order/logoxiao.png) no-repeat !important;
+	background-size: 100% 100% !important;
+	border: 1px solid #ccc !important;
+}
+/**/
+.main{
+	padding: 0 13px;
+	width: 100%;
+	background: #fff;
+	border-top: 1px solid #ccc;
+	border-top-left-radius: 10px;
+	border-top-right-radius: 10px;
+	position: absolute;
+	top: 60px;
+	left: 0;	
+}
+.bb{
+	display: none;
+}
+.xl{
+	display: none;
+}
+.sl,.xl{
+	margin-left: -22.5px;
+	width: 45px;
+	height: 8px;
+	background: #fff;
+	position: absolute;
+	top: -7.5px;
+	left: 50%;
+	border-radius: 3px;
+	border-bottom-left-radius: 0;
+	border-bottom-right-radius: 0;
+	border: 1px solid #ccc;
+	border-bottom: none;
+}
+.sl img,.xl img{
+	margin-left: -4px;
+	width: 8px;
+	position: absolute;
+	top: 5px;
+	left: 50%;
+}
+/**/
+.item1_one_top{
+	margin-bottom: 16px;
+	margin-top: 13px;
+	width: 100%;
+	height: 32px;
+}
+.item1_one_top p{
+	float: left;
+}
+.item1_one_top p:nth-child(1){
+	margin-right: 8px;
+	width: 32px;
+	height: 32px;
+	border-radius: 50%;
+	overflow: hidden;
+}
+.item1_one_top p:nth-child(1) img{
+	width: 100%;
+}
+.item1_one_top p:nth-child(2){
+	width: 160px;
+	height: 32px;
+	position: relative;
+}
+.item1_one_top p:nth-child(2) span{
+	display: inline-block;
+	width: 100%;
+	color: #666;
+	font-size: 12px;
+}
+.item1_one_top p:nth-child(2) span:nth-child(1){
+	height: 15px;
+	line-height: 15px;
+	position: absolute;
+	top: 1px;
+}
+.item1_one_top p:nth-child(2) span:nth-child(2){
+	height: 14px;
+	line-height: 14px;
+	position: absolute;
+	top: 19px;
+}
+.item1_one_top p:nth-child(3){	
+	float: right;
+	width: 40px;
+	height:24px;
+	text-align: center;
+	line-height: 21px;
+	color: #FF6666;
+	font-size: 12px;
+	border-radius: 30px;
+	border: 1px dotted #FF6666;
+	
+}
+.main_list,.main_list1{
+	margin-bottom: 10px;
+	padding: 8px 10px;
+	width: 100%;
+	background: #F5F5F5;
+	border-radius: 10px;
+}
+.main_list p{
+	width: 100%;
+	height: 29px;
+	position: relative;
+}
+.main_list p span{
+	display: inline-block;
+	float: left;
+	height: 29px;
+	line-height: 29px;
+}
+.main_list p span:nth-child(1){
+	width: 58px;
+	color: #999999;
+	font-size: 10px;
+}
+.main_list p span:nth-child(2){
+	width: 200px;
+	color: #333;
+	font-size: 12px;
+}
+.main_list p img{
+	width: 12px;
+	position: absolute;
+	right: 0;
+	top: 5px;
+}
+.je{
+	color: #6A4A23;
+}
+.beizhu{
+	height: 40px !important;
+}
+.beizhu span:nth-child(2){
+	margin-top: 5px;
+	height: 40px !important;
+	line-height: 20px;
+}
+.bb div:last-child{
+	margin-bottom: 60px;
+}
+/**/
+.main_list1 p:nth-child(1){
+	width: 100%;
+	height: 34px;
+	line-height: 34px;
+	color: #999999;
+	font-size: 12px;
+}
+.main_list1 p:nth-child(2) img{
+	float: left;
+	margin-right: 10px;
+	margin-bottom: 10px;
+	width: 44px;
+	height: 44px;
+	border-radius: 3px;
+}
+.main_list1 p:nth-child(2) span{
+	display: block;
+}
+
+
+
+
+
+
+
+
+
+
+
+/**/
+nav{
+	width: 100%;
+	height: 50px !important;
+	padding: 9px 25px !important;
+}
+nav p{
+	width: 100%;
+	height: 33px;
+	text-align: center;
+	line-height: 33px;
+	color: #fff;
+	font-size: 15px;
+	background: #6A4A23;
+	border-radius: 30px;
+}
+/**/
+.qiangdan_pop,.quxiao_pop{
+	display: none;
+	width: 100%;
+	height: 100%;
+	background: rgba(0,0,0,0.5);
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 99;
+}
+.qiangdan,.quxiao{
+	width: 78.125%;
+	height:150px;
+	background: #fff;
+	border-radius:10px;
+	position: fixed;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%,-50%);
+	-webkit-transform: translate(-50%,-50%);
+}
+.qiangdan p:nth-child(1),
+.quxiao p:nth-child(1){
+	width: 100%;
+	height: 60px;
+	text-align: center;
+	line-height: 60px;
+	color: #333;
+	font-size: 15px;
+	font-weight: bold;
+	
+}
+.qiangdan p:nth-child(2),
+.quxiao p:nth-child(2){
+	width: 100%;
+	height:15px;
+	text-align: center;
+	line-height:15px;
+	color: #999;
+	font-size: 12px;	
+}
+.qiangdan p:nth-child(3),
+.quxiao p:nth-child(3){
+	margin: auto;
+	margin-top: 25px;
+	width: 65px;
+	height:33px;
+	text-align: center;
+	line-height:33px;
+	color: #fff;
+	font-size: 12px;
+	background: #6A4A23;
+	border-radius: 30px;	
+}

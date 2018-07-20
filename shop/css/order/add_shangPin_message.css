@@ -1,0 +1,81 @@
+.message_list{	
+	margin-bottom:0px;
+	width: 100%;
+	background: #fff;
+	border-bottom: 1px solid #dbdbdb;
+}
+.message_list p{
+	padding: 0 15px;	
+	width: 100%;
+	height:42px;	
+	border-bottom: 1px dotted #dbdbdb;
+	position: relative;
+}
+.message_list p:last-child{
+	border: none;
+}
+.message_list p span{
+	float: left;
+	display:block;
+	width: 13%;
+	height:42px;
+	line-height: 42px;
+	font-size: 14px;
+	color: #333;
+}
+.message_list p span:nth-child(1){
+	color: #666;
+	width: 70px;
+}
+.message_list p span:nth-child(2){
+	width: 49%;
+}
+
+.contain{
+	float: right;
+	margin-top: -10px;
+	width:40%;
+	height: 40px;
+	line-height: 30px;
+	color: #6a4a23;
+	font-size:14px;				
+	position: relative;
+}
+.contain img{
+	width: 20px;
+	position: absolute;
+	right: 105px;
+	top: 9px;
+}
+.contain span{
+	position: absolute;
+	right:15px;
+	top: 5px;
+}
+.delete{
+	text-align:center;
+	border-bottom: 1px solid #fff;
+	position: absolute;
+	right: 0;
+	top: 0;
+	background: #CC3333;
+	color: #fff !important;
+}
+.btn{
+	width: 100%;
+	height: 40px;
+	position: absolute;
+	bottom: 30px;
+}
+.btn p{
+	margin: auto;
+	width: 78%;
+	height: 40px;
+	text-align: center;
+	line-height: 40px;
+	color: #fff;
+	font-size: 15px;
+	background: #6A4A23;
+	border-radius: 30px;
+	
+}

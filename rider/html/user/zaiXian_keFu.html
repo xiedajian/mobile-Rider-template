@@ -1,0 +1,71 @@
+<!doctype html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link href="../../css/mui.min.css" rel="stylesheet" />
+		<link rel="stylesheet" href="../../css/user/zaiXian_keFu.css" />
+	</head>
+
+	<body>
+		<header class="mui-bar mui-bar-nav">
+		    <a class="mui-action-back">
+				<img src="../../img/enter/icon_back@2x.png" alt=""/>
+			</a>
+		    <h1 class="mui-title">在线客服</h1>
+		</header>
+		<div class="mui-content">
+			<ul>
+				<li class="time">
+					2017-6-25 10:00
+				</li>
+		    	<li class="right">
+		    		<b></b>
+		    		<p>
+		    			你好，请问这个订单什么时候可以发货呢？
+		    		</p>
+		    		<div style="clear: both;height: 0;width: 0;"></div>
+		    	</li>
+		    	<li class="time">
+					2017-6-25 10:00
+				</li>
+		    	<li class="left">
+		    		<b></b>
+		    		<p>
+		    			你好，请问这个订单什么时候可以发货呢？你好，请问这个订单什么时候可以发货呢？
+		    		</p>
+		    		<div style="clear: both;height: 0;width: 0;"></div>
+		    	</li>
+		    </ul>
+		</div>	
+		<nav class="mui-bar mui-bar-tab">
+		    <input type="text" class="txt"/>
+		    <button class="btn">发送</button>
+		</nav>
+		<script src="../../js/mui.min.js"></script>
+		<script src="../../js/jquery-1.7.2.js"></script>
+		<script src="../../js/tiaozhuan.js"></script>
+		<script type="text/javascript">
+			mui.init();	
+			var hei=$('body').height()-54-60;
+			$('ul').css('height',hei);
+			$('.btn').on('tap',function(){
+				var txt=$('.txt').val();
+				var data=new Date();
+				data.getYear(); 
+				var y=data.getFullYear();
+				var m=data.getMonth()+1;         
+				var d=data.getDate(); 
+				var h=data.getHours(); 
+				var min=data.getMinutes(); 
+				var s=data.getSeconds(); 
+			    var time=y+'-'+m+'-'+d+' '+h+':'+min+':'+s;
+				$('ul').append('<li class="time">'+time+'</li><li class="right"><b></b><p>'+txt+'</p><div style="clear: both;height: 0;width: 0;"></div></li>');
+			})
+
+		</script>
+	</body>
+
+</html>

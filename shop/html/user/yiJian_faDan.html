@@ -1,0 +1,67 @@
+<!doctype html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link href="../../css/mui.min.css" rel="stylesheet" />
+		<link rel="stylesheet" href="../../css/user/yiJian_faDan.css" />
+	</head>
+
+	<body>
+		<header class="mui-bar mui-bar-nav">
+		    <a class="mui-action-back">
+				<img src="../../img/order/back.png" alt=""/>
+			</a>
+		    <h1 class="mui-title">设置一键发单</h1>		    
+		</header>
+		<div class="mui-content">
+			<p class="tit">
+				请先绑定想要一键发单的平台帐号(可多选)
+			</p>
+		     <div class="main_top">
+		     	<p>
+		     		<span>绑定饿了么商家帐号</span>
+		     		<span class="switch"><i class="circel"></i></span>
+		     		<span class="tip">未绑定</span>
+		     		
+		     	</p>
+		     	<p>
+		     		<span>绑定美团外卖商家帐号</span>
+		     		<span class="switch"><i class="circel"></i></span>
+		     		<span class="tip">未绑定</span>
+		     		
+		     	</p>
+		     	<p>
+		     		<span>绑定百度外卖商家帐号</span>
+		     		<span class="switch"><i class="circel"></i></span>
+		     		<span class="tip">未绑定</span>
+		     		
+		     	</p>
+		     	
+		     </div>		    
+		</div>	
+		
+		<script src="../../js/mui.min.js"></script>
+		<script src="../../js/jquery-1.7.2.js"></script>
+		<script src="../../js/tiaozhuan.js"></script>
+		<script type="text/javascript">
+			mui.init();
+			$('.switch').toggle(function(){
+				$(this).find('i').css({'transition':'all .5s','left':'25px'});
+				$(this).css({'background':'#6a4a23','transition':'all .5s'});
+				$(this).parent().find('.tip').css({'transition':'all .5s','color':'#6a4a23'});
+			    $(this).next().html('已绑定');
+			    $(this).next().css('color','#6a4a23')
+			},function(){
+				$(this).find('i').css({'transition':'all .5s','left':'2px'});
+				$(this).css({'background':'#999','transition':'all .5s'});
+				$(this).parent().find('.tip').css({'transition':'all .5s','color':'#999'});
+			    $(this).next().html('未绑定');
+			    $(this).next().css('color','#999')
+			})
+		</script>
+	</body>
+
+</html>

@@ -1,0 +1,80 @@
+<!doctype html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link href="../../css/mui.min.css" rel="stylesheet" />
+		<link rel="stylesheet" href="../../css/enter/zhuce.css" />
+		<script type="text/javascript" src='https://webapi.amap.com/maps?v=1.3&key=a8e1a7970fbf0919d39456d9d78568d9&plugin=AMap.ToolBar'></script>
+	    <script src="https://webapi.amap.com/ui/1.0/main.js"></script>
+	</head>
+	<body>
+		<header class="mui-bar mui-bar-nav">
+		    <a class="mui-action-back">
+				<img src="../../img/enter/icon_back@2x.png" alt=""/>
+			</a>
+		    <h1 class="mui-title">注册</h1>
+		</header>
+		<div class="mui-content">
+			<div class="main">
+				<div class="logo">
+			    	<img src="../../img/enter/logo.png" alt="" />
+			    </div>
+			   <div class="shuRu">
+			    	<div class="city">
+			    	     <span id="area" class="weizhi">郑州市</span>
+			    	     <img src="../../img/enter/right.png" alt="" />
+			    	</div>
+			    	<div>			    		
+			    		<input type="number" id="phone" placeholder="手机号"/>
+			    		<span class="send">获取验证码</span>
+			    	</div>
+			    	<div>			    		
+			    		<input type="text" id="Vcode" placeholder="验证码"/>
+			    	</div>
+			    	<div class="mui-input-row">				      
+				        <input type="password" id="password" class="mui-input-password" placeholder="请设置登录密码">
+				    </div>
+				    <div>			    		
+			    		<input type="number" id="phone1" placeholder="推荐人手机号(非必填)"/>
+			    	</div>
+			    </div>
+			</div>
+		    
+		    <div class="enter_register">
+		    	<p class="register">确认注册</p>
+		    </div>		  
+		    <p class="xieyi">注册表示您已同意平台的相关协议</p>
+		</div>
+		<script src="../../js/mui.min.js"></script>
+		<script src="../../js/jquery-1.7.2.js"></script>
+		<script src="../../js/zepto-1.1.6.min.js"></script>
+		<script src="../../js/tiaozhuan.js"></script>
+		<script src="../../js/enter/zhuce.js"></script>
+		<script type="text/javascript">
+			mui.init();
+			$('.city').on('tap',function(){
+				AMapUI.setDomLibrary(Zepto);
+				//////加载MobiCityPicker，loadUI的路径参数为模块名中 'ui/' 之后的部分
+				AMapUI.loadUI(['misc/MobiCityPicker'], function(MobiCityPicker) {
+				var cityPicker = new MobiCityPicker({
+				 		
+				});
+				//////监听城市选中事件
+				cityPicker.on('citySelected', function(cityInfo) {
+				////  //隐藏城市列表
+					cityPicker.hide();
+					$('.weizhi').html(cityInfo.name)
+					
+				////  //选中的城市信息
+				}); 
+				//////显示城市列表，可以用某个click事件触发
+				cityPicker.show();
+				});
+				});
+		</script>
+	</body>
+
+</html>

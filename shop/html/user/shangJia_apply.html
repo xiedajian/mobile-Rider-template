@@ -1,0 +1,59 @@
+<!doctype html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link href="../../css/mui.min.css" rel="stylesheet" />
+		<link rel="stylesheet" href="../../css/user/shangJia_apply.css" />
+	</head>
+
+	<body>
+		<header class="mui-bar mui-bar-nav">
+		    <a class="mui-action-back">
+				<img src="../../img/order/back.png" alt=""/>
+			</a>
+		    <h1 class="mui-title">优质商家申请</h1>		    
+		</header>
+		<div class="mui-content">
+			<img src="../../img/user/beijing.png"/>
+			<!--未申请之前，默认显示-->
+			<p class="btn">申请优质商家</p>
+			<!--申请之后显示，默认不显示-->
+			<p class="btn link" data-link = "../../html/user/shangJia_cancel_1.html" style="background: #676767;display: none;">点击取消优质商家</p>
+		</div>	
+		<div class="apply_pop">
+			<div class="apply">
+				<p>
+					<span>申请优质商家请拨打客服电话</span>
+					<span>400-0000-0000</span>
+				</p>
+				<p>
+					<a class="cancel">取消</a>
+					<a href="tel:18000000000">呼叫</a>	
+				</p>
+			</div>
+		</div>
+		<script src="../../js/mui.min.js"></script>
+		<script src="../../js/jquery-1.7.2.js"></script>
+		<script src="../../js/tiaozhuan.js"></script>
+		<script type="text/javascript">
+			mui.init();
+			var hei =$('.mui-content').height()+44;
+			window.onresize=function(){
+			   hei =$('.mui-content').height()+44;
+				
+			}
+			$('.apply_pop').css('height',hei);
+			
+			$('.btn').on('tap',function(){
+				$('.apply_pop').css('display','block');
+			})
+			$('.cancel').on('tap',function(){
+				$('.apply_pop').css('display','none');
+			})
+		</script>
+	</body>
+
+</html>

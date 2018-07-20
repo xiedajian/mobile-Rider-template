@@ -1,0 +1,266 @@
+body{
+	width: 100%;
+	height: 100%;
+	font-family: "微软雅黑";
+	color: black;
+	background: #f5f5f5;
+}
+html{
+	width: 100%;
+	height: 100%;
+	
+}
+*{
+	margin: 0;
+	padding: 0;
+}
+li { list-style:none; }
+a { text-decoration:none;color: black }
+img { border:none;}  /* 去除IE下默认边框,顶部对齐 */
+p{margin: 0;padding: 0;}
+.mui-bar{
+	height:44px;
+	line-height: 44px;
+	background: #6A4A23;
+	box-shadow: none;
+	-webkit-box-shadow: none;
+}
+.mui-action-back{
+	display: inline-block;
+	width: 44px;
+	height: 44px;
+}
+header img{
+	width:10px;
+	height: 17px;
+	position: absolute;
+	top:13px;
+}
+.mui-title{
+	color: #fff;
+	font-size: 16px;
+}
+.mui-content{
+	width: 100%;
+	margin-bottom: 20px;
+	background: #f5f5f5;
+}
+/**/
+.jinDu{
+	margin-bottom: 10px;
+	padding-top: 10px;
+	width: 100%;
+}
+.jinDu img{
+	margin-left: -30.6%;
+	width: 61.565%;
+	max-height: 25px;
+	position: absolute;
+	left: 50%;
+	
+}
+.jinDu p{
+	margin-top: 6.565%;
+	width: 100%;
+	height: 20px;
+	line-height: 20px;
+	color: #666666;
+	font-size: 14px;
+}
+.jinDu p span{
+	float: left;
+	display: inline-block;
+	width: 50%;
+	height: 20px;
+	/*text-align: center;*/
+	line-height: 20px;
+}
+.jinDu p span:nth-child(1){
+	color: #6A4A23;
+	padding-left: 14%;
+}
+.jinDu p span:nth-child(2){
+	padding-left: 23%;
+}
+/**/
+.wzz_list{
+	padding: 0 15px;
+	width: 100%;
+	background: #fff;
+	border-bottom: 1px solid #dbdbdb;
+}
+.wzz_list p{
+	width: 100%;
+	height: 41px;
+	line-height: 41px;
+	font-size: 14px;
+	border-bottom: 1px dotted #dbdbdb;
+	position: relative;
+}
+.wzz_list p:last-child{
+	border-bottom: none;
+}
+.wzz_list p span:nth-child(1){
+	color: #333;
+}
+.wzz_list p span:nth-child(2){
+	color: #666;
+}
+.wzz_list p span:nth-child(2) input{
+	padding: 0;
+	margin: 0;
+	width: 70%;
+	height: 28px;
+	line-height: 30px;
+	color: #333;
+	font-size: 13px;
+	border: none;
+	
+}
+.wzz_list p span:nth-child(3){
+	display: inline-block;
+	width: 6px;
+	height: 10px;
+	position: absolute;
+	top:0;
+	right: 0;
+}
+.wzz_list p span:nth-child(3) img{
+	width: 6px;
+	height: 10px;
+}
+/**/
+.main_top{
+	margin-top: 10px;
+	padding: 0 15px;
+	width: 100%;
+	background: #fff;
+	border-top: 1px solid #dbdbdb;
+	border-bottom: 1px solid #dbdbdb;
+}
+.main_top>p{
+	width: 100%;
+	height: 30px;
+	line-height: 30px;
+	color: #333;
+	font-size: 14px;
+}
+.tit span{
+	color: #cc3333;
+}
+.main_top>div{
+	margin-bottom: 3px;
+	width: 100%;
+	height: 90px;
+}
+
+.main_top>div p{
+	float: left;
+	width: 96px;
+}
+.main_top>div p img{
+	width: 96px;
+	height: 60px;
+}
+.main_top>div p span{
+	margin-top: -4px;
+	display: inline-block;
+	width: 100%;
+	height: 30px;
+	text-align: center;
+	line-height: 30px;
+	color: #666;
+	font-size: 13px;
+}
+.main_top>div div.con{
+	float: left;
+	width: 96px;
+}
+.main_top>div div.con>span{
+	display: inline-block;
+	width: 100%;
+	height: 30px;
+	text-align: center;
+	line-height: 30px;
+	color: #666;
+	font-size: 14px;
+}
+.btn{
+	margin: auto;
+	width:78.438%;
+	height: 35px;
+	text-align: center;
+	line-height: 35px;
+	color: #fff;
+	font-size: 15px;
+	border-radius: 30px;
+	background:#6A4A23;
+}
+/**/
+.mui-poppicker{
+	background: #fff;
+}
+.mui-picker{
+	background: #fff;
+}
+.mui-pciker-list li{
+	color: #333333;
+	font-size: 16px;
+}
+.mui-poppicker-body{
+	height: 150px;
+}
+/**/
+.xieyi{
+	margin-bottom: 5px;
+	padding: 0 15px;
+	padding-left: 38px;
+	width: 100%;
+	height: 35px;
+	line-height: 35px;
+	color: #999999;
+	font-size: 12px;
+	position: relative;
+}
+.xieyi span:nth-child(1){
+	display: inline-block;
+	width: 15px;
+	height: 15px;
+	position: absolute;
+	top: 10px;
+	left: 15px;
+	background: url(../../img/order/xuankuang.png) no-repeat;
+	background-size: 15px 15px;
+}
+.xieyi span:nth-child(1) img{	
+	width: 21px;
+	position: absolute;
+	top: -6px;
+	left: -3px;
+}
+.xieyi span:nth-child(3){
+	color: #6A4A23;
+}
+
+/**/
+.z_photo{
+	position: relative;
+	width: 96px;
+	height: 60px;
+}
+			
+.z_file{
+	width: 96px;
+	height:60px;
+	background:url(../../img/enter/sfz_04.png) no-repeat 3.125% top;
+	background-size: 100% 100%;
+	position: absolute;
+	bottom: 0;
+}
+#file,#file1,#file2,#file3,#file4{
+	opacity: 0;
+	width: 100%;
+	height: 100%;
+}
+	
+	

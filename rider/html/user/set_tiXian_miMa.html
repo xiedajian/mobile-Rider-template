@@ -1,0 +1,90 @@
+<!doctype html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link href="../../css/mui.min.css" rel="stylesheet" />
+		<link rel="stylesheet" href="../../css/user/set_tiXian_miMa.css" />
+	</head>
+
+	<body>
+		<header class="mui-bar mui-bar-nav">
+		    <a class="mui-action-back">
+				<img src="../../img/enter/icon_back@2x.png" alt=""/>
+			</a>
+		    <h1 class="mui-title">设置提现密码</h1>
+		</header>
+		<div class="mui-content">
+			<div class="wzz_list">
+				<p>
+					<input type="password" placeholder="请输入密码" id="password"/>
+				</p>	
+				<p>
+					<input type="password" placeholder="请再次确认密码" id="password1"/>
+				</p>				
+			</div>
+			<p class="btn">确认</p>
+		</div>	
+		<div class="com_pop">
+			<div class="com">
+				<p>设置提现密码</p>
+				<p class="tip"></p>
+				<p class="enter">确定</p>
+			</div>
+		</div>
+		<script src="../../js/mui.min.js"></script>
+		<script src="../../js/jquery-1.7.2.js"></script>
+		<script src="../../js/tiaozhuan.js"></script>
+		<script type="text/javascript">
+			mui.init();	
+			$('.btn').on('tap', function() {
+				if($('#password').val() == ''&&$('#password1').val() == '') {
+					
+					$('.tip').html('请输入密码并进行确认！');
+					$('.com_pop').css('display','block');
+				} else if($('#password').val() == '') {
+					
+					$('.tip').html('请输入密码！');
+					$('.com_pop').css('display','block');
+				} else if($('#password1').val() == '') {
+					
+					$('.tip').html('请确认密码！');
+					$('.com_pop').css('display','block');
+				} else if($('#password1').val() != $('#password').val()) {
+					
+					$('.tip').html('两次密码不一致！');
+					$('.com_pop').css('display','block');
+				} else if($('#password').val() != ''&&$('#password1').val() != '' && $('#password1').val() == $('#password').val()) {
+					var password = $('#password').val();
+					if(password.length < 6 || password.length > 16) {
+						
+						$('.tip').html('密码长度必须大于6位并小于16位！');
+					    $('.com_pop').css('display','block');
+					}else{
+						$('.tip').html('修改成功！');
+					    $('.com_pop').css('display','block');
+					    $('.enter').on('tap',function(){
+							 $('.com_pop').css('display','none');
+							 mui.openWindow({
+									url: '../..//html/user/set.html',
+									id:  '../..//html/user/set.html',
+									show: {
+										aniShow: 'zoom-fade-out',
+										duration: 300
+									}
+								})
+						})
+					}
+			
+				}
+			
+			})
+			$('.enter').on('tap',function(){
+				 $('.com_pop').css('display','none');
+			})
+		</script>
+	</body>
+
+</html>
