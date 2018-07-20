@@ -4,11 +4,15 @@
 
 内含商家端和跑腿端
 
-## 商家端:发布订单
+## shop 
 
-shop
+商家端:发布订单
+
+预览： https://xiedajian.github.io/mobile-Rider-template/shop/html/enter/enter.html
 
 
-## 跑腿骑手端:接订单
+## rider
 
-rider
+跑腿骑手端:接订单
+
+预览： https://xiedajian.github.io/mobile-Rider-template/rider/html/enter/enter.html
